@@ -1,2 +1,43 @@
 \section{Fondamentaux}
 Cette section parcour les notions fondamentales d'optique pour comprendre la suite de ce rapport.
+
+\subsection{Les turbulances atmosphériques}
+
+\subsubsection{Cause physique}
+L'atmosphère de notre planète n'est pas un bloc homogène, cette dernière est composée de \textbf{masses d'air}. Ces masses d'air
+sont des zones de l'atmosphère où les conditions de température, de pression et d'humidité sont homogènes \cite{masse_air_wiki}\cite{masse_air_unige}.
+L'écoulement de ces zones se fait en régime turbulent à des vitesses usuellements mesurées entre 1 et 20 m/s sur des longueurs de 10 à 1000m, ce phénomène
+turbulent des mouvements de masses d'air sera qualifié de \textbf{turbulance dynamique} dans la suite de ce rapport.
+
+Cette turbulence dynamique (la vitesse de l'écoulement ) n'a pas d'incidence directe sur la propagation des ondes lumineuses, seul l'indice de réfraction de l'atmosphère influence la propagation
+de la lumière. L'indice de réfraction est influencé par la densité de l'air selon la loi de Dale-Gladstone:
+
+% \begin{equation}
+%     N = 77.6 (\frac{P}{T}) + 3.74\cdot 10^5 (\frac{e}{T^2}) + C\frac{n_e}{f^2}
+% \end{equation}
+
+% Où:
+% \begin{itemize}
+%     \item $P$ = pression exprimée en hPa
+%     \item $T$ = température absolue (K)
+%     \item $e$ = pression de vapeur d'eau contenue dans l'air (hPa)
+%     \item $C$ = $4,03 \cdot 10^{-7} m^{-3}Hz^2$
+%     \item $n_e$ = densité électronique
+%     \item $f$ = fréquence du signal
+% \end{itemize}
+
+\begin{equation}
+  n-1 \sim \rho = \alpha_n \cdot \frac{P}{T}
+\end{equation}
+
+Où:
+\begin{itemize}
+  \item $P$ = pression exprimée en $N/m^2$
+  \item $T$ = température absolue (K)
+  \item $\alpha_a$ = $80\cdot10^{-8} K/Pa$
+\end{itemize}
+
+Pour aller plus loin, c'est généralement la température qui aura une grande influence sur l'indice de réfraction de l'air
+et non la pression, car cette dernière est constante dans toute l'épaisseur d'une couche turbulente. Cette perturbation d'indice de
+réfraction entre les couches turbulantes est donc la source des \textbf{Turbulences optiques}\cite{thèse_laurent_turbulence}.
+
