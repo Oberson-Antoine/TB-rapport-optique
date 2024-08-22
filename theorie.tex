@@ -15,13 +15,25 @@ Le seeing peut être quantifié en seconde d'arc du disque de seeing, le diamèt
   \caption[Illustration de la LMH]{Illustration de la largeur à mis-hauteur \autocite{largeur_mis_hauteur}\footnotemark}\label{fig:largeur_mis_hauteur}
 \end{figure}
 
-Un seeing étant $\leq  0.4$' d'arc est considéré comme excellant, au DAG le seeing est usuellement de \color{red} DONNER VALEUR \color{black}.
+\footnotetext{\fullcite{largeur_mis_hauteur}}
+Un seeing étant $\leq  0.4$' d'arc est considéré comme excellant, au DAG le seeing est usuellement de 0.9'.
 
 Une autre façon de quantifier le seeing est le paramètre de fried $\mathbf{r_0}$. Pour expliquer le paramètre $r_0$, c'est le diamètre en cm qu'aurait un téléscope
-qui fournirait, en l'absence de turbulences, la même image que notre téléscope en présence de turbulences.
-\footnotetext{\fullcite{largeur_mis_hauteur}}
+qui fournirait, en l'absence de turbulences, la même image que notre téléscope en présence de turbulences. C'est ce paramètre $r_0$ qui sera utilisé en suite pour caractériser les écrans de phase.
 
-\newpage
+La formule qui sera utilisée dans le calcul du paramètre de Fried sera :
+\begin{equation}
+  \sigma_{a_j}^2 \sim F(j) \cdot (\frac{D}{r_0})^{5/3}
+\end{equation}
+
+Où :
+\begin{itemize}
+  \item $\sigma_{a_j}^2$ = la variance des coefficients de Zernike j
+  \item  $F(j)$ = \color{red} TROUVER NOM \color{black}
+  \item $D$ = diamètre du laser
+  \item $r_0$ = paramètre de fried
+\end{itemize}
+
 \subsection{Les turbulences atmosphériques}
 
 \subsubsection{Cause physique}
@@ -100,3 +112,86 @@ il est possible d'en distinguer 4 types :
 
 
 \footnotetext{\cite{thèse_laurent_turbulence_types}\fullcite{thèse_laurent_turbulence_types}}
+
+\newpage
+\subsection{Front d'onde et coefficients de Zernike}
+\subsubsection{Front d'onde}
+Un front d’onde est une surface imaginaire qui relie tous les points d’une onde ayant la même phase à un instant donné.
+Pour la lumière, cela signifie que tous les points sur un front d’onde ont parcouru la même distance depuis la source lumineuse et oscillent en phase.
+Le front d'onde est perpendiculaire à la direction de la lumière, donc une refraction modifiera de manière prédictible le front d'onde :
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.75\linewidth]{assets/figures/théorie/wavefront_representation.png}
+    \caption{Representation du front d'onde perpendiculaire}
+    \label{fig:front_onde_perp}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.4\linewidth]{assets/figures/théorie/Lens_and_wavefronts.jpeg}
+    \caption{Modification du front d'onde après réfraction}
+    \label{fig:refraction_front_onde}
+  \end{subfigure}
+  \caption[Illustration front d'onde]{Illustrations du principe de front d'onde \cite{wavefront_wikipedia}\footnotemark}
+  \label{fig:illu_front_onde}
+\end{figure}
+\footnotetext{\fullcite{wavefront_wikipedia}}
+
+\subsubsection{Mesure du front d'onde}
+
+Pour mesurer le front d'onde, on emploie un \textbf{capteur de front d'onde Shack-Hartmann} du fabricant Thorlabs:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 0.4\textwidth]{assets/figures/théorie/WFS40_7AR.png}
+  \caption[Fonctionnement WFS Thorlabs]{Fonctionnement du capteur de front d'onde\cite{WFS_thorlabs_site}\footnotemark}
+  \label{fig:WFS_thorlabs_fonctionnement}
+\end{figure}
+\footnotetext{\fullcite{WFS_thorlabs_site}}
+
+\newpage
+Le principe de fonctionnement d'un capteur de Shack-Hartmann est le suivant :
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 1.1\textwidth]{assets/figures/théorie/Shack_Hartmann_Wavefront_Distorted.png}
+  \caption[Image WFS Thorlabs]{WFS4\_7AR de Thorlabs\cite{WFS_thorlabs_site}\footnotemark}
+  \label{fig:WFS_thorlabs}
+\end{figure}
+\footnotetext{\fullcite{WFS_thorlabs_site}}
+
+\say{Un capteur de Shack-Hartmann consiste en une grille de lentilles et une caméra. Quand un front d'onde entre dans la matrice de lentilles,
+  un champs de point est créé sur la caméra. L'intensité et la position de chaque point est analysé pour mesurer dynamiquement le front d'onde
+  de sources laser ou de caractériser la distortion de front d'onde causée par des composants optiques.}\footnotemark[5]
+
+Ce capteur nous est donc utile, car ce dernier permet de mesurer et de représenter le front d'onde du laser, il retourne aussi les coefficients de
+Zernike du front d'onde.
+
+
+\subsubsection{Coefficients de Zernike}
+
+Les coefficients de Zernike sont issus des polynomes de Zernike, ces derniers
+permettent de décrire n'importe quelle surface dans un domaine circulaire.
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{assets/figures/théorie/Zernike-polynomials-equations.png}
+    \caption{Formules des polynomes de Zernike}
+    \label{fig:formules_poly_Zernike}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.75\linewidth]{assets/figures/théorie/zernike_polynomes_plots.png}
+    \caption{Représentation des polynomes de Zernike}
+    \label{fig:plots_des_polynomes_Zernike}
+  \end{subfigure}
+  \caption[Illustration polynomes de Zernike]{Illustration polynomes de Zernike \cite{Zernike_docteur_Damien}\footnotemark}
+  \label{fig:illu_poly_Zernike}
+\end{figure}
+
+\footnotetext{\fullcite{Zernike_docteur_Damien}}
+
+Pour reconstruire le front d'onde il suffit alors de sommer les fronts d'ondes des coefficients de zernike i j.

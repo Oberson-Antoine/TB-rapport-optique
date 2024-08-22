@@ -15,9 +15,25 @@ la porte est désormais équipée d'une fenetre:
     \caption{Photo de la porte après modification}\label{photo porte fenetre}
 \end{figure}
 
-DECRIRE FIXATION
-
-
+La vitre est fixée à l'aide de petites broches vissées dans le bois :
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \includegraphics[width=1\linewidth,trim = 250 420 180 300, clip]{assets/figures/ameliorations/fixation_vitre.jpg}
+        \caption{Vitre fixée}
+        \label{fig:vitre_fixee}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \includegraphics[width=.75\linewidth]{assets/figures/ameliorations/broche_vitre.png}
+        \caption{Broche de fixation de la vitre}
+        \label{fig:broche_fixation_vitre}
+    \end{subfigure}
+    \caption[Illustration de la fixation de la vitre]{Illustration de la fixation de la vitre}
+    \label{fig:illu_vitre_porte}
+\end{figure}
+Le chablon pour les trous est trouvable dans l'\autoref{chablon_trous_vitre}.
 \newpage
 \section{Mesures}
 \subsection{Problématique et situation d'origine}
@@ -26,23 +42,24 @@ Le procédé de mesure d'origine est sommaire et nécessite beaucoup de temps, e
     \item Placer le disque dans le faisceau :
           \begin{figure}[H]
               \centering
-              \includegraphics[width=0.5\textwidth]{assets/figures/Placeholder.jpeg}
-              \caption{Placeholder}\label{Placeholder}
+              \includegraphics[width=0.5\textwidth]{assets/figures/ameliorations/disque_fixe.jpeg}
+              \caption{Disque placé dans le faisceau}\label{fig:disque_fixe}
           \end{figure}
 
     \item Attendre quelques secondes que la mesure sur le logiciel soit stable:
-          \begin{figure}[H]
-              \centering
-              \includegraphics[width=0.5\textwidth]{assets/figures/Placeholder.jpeg}
-              \caption{Placeholder}\label{Placeholder}
-          \end{figure}
+          %   \begin{figure}[H]
+          %       \centering
+          %       \includegraphics[width=0.5\textwidth]{assets/figures/Placeholder.jpeg}
+          %       \caption{Placeholder}\label{Placeholder}
+          %   \end{figure}
 
     \item Prendre la mesure l'enregistrer en format \textbf{.csv} avec le numéro de mesure.
+
     \item Tourner le disque d'un petit angle:
           \begin{figure}[H]
               \centering
-              \includegraphics[width=0.5\textwidth]{assets/figures/Placeholder.jpeg}
-              \caption{Placeholder}\label{Placeholder}
+              \includegraphics[width=0.5\textwidth,trim = 0 140 0 0, clip]{assets/figures/ameliorations/écran_rotation_manuelle.png}
+              \caption{Rotation manuelle de l'écran}\label{fig:rotation_manuelle}
           \end{figure}
 \end{enumerate}
 
@@ -79,22 +96,33 @@ drivers spécifiques sont installés avec le programme de Thorlabs. Malheureusem
 Cela a donc porté mon regard sur l'utilisation de \textbf{Matlab}, et par chance, un utilisateur a développé une librairie Matlab permettant d'utiliser la caméra ! Cette ressource est disponible ici :
 \url{https://www.mathworks.com/matlabcentral/fileexchange/116485-driver-for-thorlabs-shack-hartmann-wavefront-sensors-wfs}, elle a comme pré-requis, l'installation du logiciel de Thorlabs pour accéder aux drivers.
 
-Il faut donc toujours utiliser un ordinateur sous windows, mais Matlab étant plus simple au niveau de ses liscences, il a été plus simple pour moi de juste travailler sur l'ordinateur du laboratoire.
+Il faut donc toujours utiliser un ordinateur sous windows, mais Matlab étant plus simple au niveau de ses licenses, il a été plus simple de juste travailler sur l'ordinateur du laboratoire.
 
-\subsubsection{Rotation de l'écran}
+\subsubsection{Rotation et translation de l'écran}
 Pour faire tourner l'écran il fallait :
 \begin{itemize}
     \item Un moyen de faire tourner l'écran.
     \item Faire communiquer l'ordinateur et le moyen de rotation.
 \end{itemize}
 
-Pour répondre au 1er besoin, j'ai utilisé un moteur pas-à-pas \textbf{28byj-48} :
+Pour répondre au 1er besoin, nous avons utilisé un moteur pas-à-pas \textbf{28byj-48} :
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{assets/figures/ameliorations/stepper.jpeg}
     \caption[Moteur 28byj-48 pas-à-pas et son driver]{Moteur 28byj-48 pas-à-pas et son driver \autocite{photo_28byj-48}}
 \end{figure}
 
+Concernant la translation de l'écran, nous avons choisi d'utiliser un moteur pas-à-pas classique \textbf{36H22HM-0404A15-Z} avec un pignon et une crémaillère basée sur les
+dimensions d'une courroie MXL classique\cite{dimensions_courroies_mxl}\footnotemark :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{assets/figures/ameliorations/36H22HM-0404A15-Z.png}
+    \caption[Moteur 36H22HM-0404A15-Z]{Moteur pas-à-pas 36H22HM-0404A15-Z\autocite{moteur_translation_site}\footnotemark}
+\end{figure}
+
+
+\footnotetext{\url{https://uk.misumi-ec.com/vona2/detail/110302566050/}}
+\footnotetext{\fullcite{moteur_translation_site}}
 \newpage
 Pour la communication entre l'ordinateur et le driver du moteur, un arduino nano (clône) est utilisé :
 \begin{figure}[H]
