@@ -116,23 +116,39 @@ Concernant la translation de l'écran, nous avons choisi d'utiliser un moteur pa
 dimensions d'une courroie MXL classique\cite{dimensions_courroies_mxl}\footnotemark :
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{assets/figures/ameliorations/36H22HM-0404A15-Z.png}
+    \includegraphics[width=0.3\textwidth]{assets/figures/ameliorations/36H22HM-0404A15-Z.png}
     \caption[Moteur 36H22HM-0404A15-Z]{Moteur pas-à-pas 36H22HM-0404A15-Z\autocite{moteur_translation_site}\footnotemark}
 \end{figure}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{assets/figures/ameliorations/dimensions_cremaillere.png}
+    \caption[Dimensions crémaillère]{Dimensions crémaillère\autocite{dimensions_courroies_mxl}}
+\end{figure}
 
 \footnotetext{\url{https://uk.misumi-ec.com/vona2/detail/110302566050/}}
 \footnotetext{\fullcite{moteur_translation_site}}
-\newpage
-Pour la communication entre l'ordinateur et le driver du moteur, un arduino nano (clône) est utilisé :
+
+
+
+\subsubsection{Communication entre ordinateur et arduino}
+
+Pour la communication entre l'ordinateur, le moteur de translation et celui de rotation, un arduino nano (clône) est utilisé :
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 0.45\textwidth]{assets/figures/ameliorations/arduino_nano.jpg}
+    \includegraphics[width = 0.4\textwidth]{assets/figures/ameliorations/arduino_nano.jpg}
     \caption[Exemple de clône d'arduino nano]{Exemple de clône d'arduino nano \autocite{clone_nano}}
 \end{figure}
 
-Pour faire fonctionner le driver \textbf{ULN2003} à l'aide du microcontrôleur, la librairie \textbf{AccelStepper}\autocite{librairie_accelstepper} est utilisée.
+Pour faire fonctionner le driver \textbf{ULN2003}du moteur de rotation à l'aide du microcontrôleur, la librairie \textbf{AccelStepper}\autocite{librairie_accelstepper} est utilisée.
 Cette dernière permet entre autre, de régler l'accélération du moteur et le nombre de pas à effectuer, de démarrer le mouvement et de l'arrêter, savoir combiens de pas il reste à faire et bien plus,
 la documentation du la librairie n'étant pas claire aux premiers abords un ressource complémentaire fut utilisée \autocite{AccelStepper_manual}.
 
-\subsubsection{Communication entre ordinateur et arduino}
+Pour le moteur de translation, un driver \textbf{DRV8825} est employé :
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.2\textwidth]{assets/figures/ameliorations/drv-8825.jpg}
+    \caption[Driver DRV8825]{Driver DRV8825 \autocite{driver_DRV8825}\footnotemark}
+\end{figure}
+\footnotetext{\fullcite{driver_DRV8825}}
