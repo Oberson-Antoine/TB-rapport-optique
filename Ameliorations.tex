@@ -140,7 +140,7 @@ Pour la communication entre l'ordinateur, le moteur de translation et celui de r
     \caption[Exemple de clône d'arduino nano]{Exemple de clône d'arduino nano \autocite{clone_nano}}
 \end{figure}
 
-Pour faire fonctionner le driver \textbf{ULN2003}du moteur de rotation à l'aide du microcontrôleur, la librairie \textbf{AccelStepper}\autocite{librairie_accelstepper} est utilisée.
+Pour faire fonctionner le driver \textbf{ULN2003} du moteur de rotation à l'aide du microcontrôleur, la librairie \textbf{AccelStepper}\autocite{librairie_accelstepper} est utilisée.
 Cette dernière permet entre autre, de régler l'accélération du moteur et le nombre de pas à effectuer, de démarrer le mouvement et de l'arrêter, savoir combiens de pas il reste à faire et bien plus,
 la documentation du la librairie n'étant pas claire aux premiers abords un ressource complémentaire fut utilisée \autocite{AccelStepper_manual}.
 
@@ -152,3 +152,6 @@ Pour le moteur de translation, un driver \textbf{DRV8825} est employé :
     \caption[Driver DRV8825]{Driver DRV8825 \autocite{driver_DRV8825}\footnotemark}
 \end{figure}
 \footnotetext{\fullcite{driver_DRV8825}}
+Ce dernier est piloté à l'aide de la librairie \textbf{StepperDriver}\cite{stepperDriver_lib}\footnotemark
+
+\footnotetext{\fullcite{stepperDriver_lib}}
