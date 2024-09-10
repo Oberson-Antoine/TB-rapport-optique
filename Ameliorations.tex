@@ -152,6 +152,57 @@ Pour le moteur de translation, un driver \textbf{DRV8825} est employé :
     \caption[Driver DRV8825]{Driver DRV8825 \autocite{driver_DRV8825}\footnotemark}
 \end{figure}
 \footnotetext{\fullcite{driver_DRV8825}}
-Ce dernier est piloté à l'aide de la librairie \textbf{StepperDriver}\cite{stepperDriver_lib}\footnotemark
+Ce dernier est piloté à l'aide de la librairie \textbf{StepperDriver}\cite{stepperDriver_lib}\footnotemark.
 
 \footnotetext{\fullcite{stepperDriver_lib}}
+
+La communication de matlab au microcontrôleur se fait via interface serial usb !
+Le principe du protocole de communication est le suivant :
+\begin{figure}[H]
+    \centering
+    \includegraphics[page = 1, width = \textwidth, trim = {7cm 9cm 2cm 3cm},clip]{assets/figures/ameliorations/trame_comm.pdf}
+    \caption[Structure de communication]{Structure de communication sous forme de choix ( en \color{red} rouge \color{black} = valeur dans la trame)}
+\end{figure}
+Sous forme de trame cela donne donc :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{assets/figures/ameliorations/trame comm.png}
+    \caption[Trame ordinateur <-> arduino mesure]{Trame ordinateur <-> arduino mesure( en \color{red} rouge \color{black} = valeur dans la trame)}
+\end{figure}
+
+Donc par exemple pour déclencher un homing la trame envoyée sera :
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 1.3]{assets/figures/ameliorations/trame_homing.png}
+    \caption[Trame homing]{Trame de homing}
+\end{figure}
+Ou pour effectuer une rotation de 130 pas et une translation de 150 pas (si on a fait un tour complet d'écran), la trame est la suivante:
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 1.3]{assets/figures/ameliorations/trame_translation_rotation.png}
+    \caption[Trame translation rotation]{Trame de translation et de rotation pour mesure de l'écran\label{fig:trame_trans_rota}}
+\end{figure}
+
+Les trames sont quant à elles envoyées dans le bus serial sous forme de string de valeurs séparées par des virgules, par exemple pour la trame
+de la \autoref{fig:trame_trans_rota} cela donnerait: \textbf{0,1,150,130}.
+
+L'arduino qui reçoit ces instructions fonctionne sous le principe suivant :
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = \textwidth]{assets/figures/ameliorations/Structogramme_arduino.pdf}
+    \caption[Structogramme programme microcontrôleur de mesure]{Structogramme programme microcontrôleur de mesure}
+\end{figure}
+Le code de l'arduino est consultable en \autoref{code:arduino_mesure}.
+
+\newpage
+\subsection{PCB système de mesure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = \textwidth]{assets/figures/ameliorations/PCB_rotation_translation.png}
+    \caption[PCB du système de mesure]{PCB du système de mesure (diagramme électrique disponible en \autoref{PCB:mesure})}
+\end{figure}
+
+\newpage
+\subsection{Programme Matlab de mesure}

@@ -1,0 +1,99 @@
+%% Creator: Inkscape 1.1.2 (0a00cf5339, 2022-02-04), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'trame comm_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{601.3589968bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.63430081)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{trame comm_svg-tex.pdf}}%
+    \put(0.46442554,0.59720982){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Mode\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{trame comm_svg-tex.pdf}}%
+    \put(0.18379868,0.3908148){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Mesure\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{trame comm_svg-tex.pdf}}%
+    \put(0.72925074,0.3908148){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Contrôle\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{trame comm_svg-tex.pdf}}%
+    \put(0.19044615,0.43740928){\color[rgb]{1,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.76516937,0.43740928){\color[rgb]{1,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{trame comm_svg-tex.pdf}}%
+    \put(0.02896189,0.17718619){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Translation\end{tabular}}}}%
+    \put(0.05075004,0.15972574){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}OFF\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{trame comm_svg-tex.pdf}}%
+    \put(0.31505142,0.17718619){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Translation\end{tabular}}}}%
+    \put(0.34056861,0.15972574){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ON\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{trame comm_svg-tex.pdf}}%
+    \put(0.04650966,0.21159575){\color[rgb]{1,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.36266856,0.21159575){\color[rgb]{1,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{trame comm_svg-tex.pdf}}%
+    \put(0.03782933,0.02651493){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Rotation\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{trame comm_svg-tex.pdf}}%
+    \put(-0.00133198,0.07475565){\color[rgb]{1,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Distance\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{trame comm_svg-tex.pdf}}%
+    \put(0.22128876,0.02651493){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Translation\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{trame comm_svg-tex.pdf}}%
+    \put(0.41768144,0.02651493){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Rotation\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{trame comm_svg-tex.pdf}}%
+    \put(0.19681919,0.07475565){\color[rgb]{1,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Distance\end{tabular}}}}%
+    \put(0.46243009,0.07475565){\color[rgb]{1,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Distance\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{trame comm_svg-tex.pdf}}%
+    \put(0.54374592,0.25957458){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Stop\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{trame comm_svg-tex.pdf}}%
+    \put(0.66561984,0.25957458){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Homing\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{trame comm_svg-tex.pdf}}%
+    \put(0.79745875,0.25957458){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Gauche\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{trame comm_svg-tex.pdf}}%
+    \put(0.93597002,0.25957458){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Droite\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{trame comm_svg-tex.pdf}}%
+    \put(0.53607576,0.30780282){\color[rgb]{1,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
+    \put(0.67681953,0.30780282){\color[rgb]{1,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}1\end{tabular}}}}%
+    \put(0.83841602,0.30371209){\color[rgb]{1,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2\end{tabular}}}}%
+    \put(0.96313354,0.30371209){\color[rgb]{1,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}3\end{tabular}}}}%
+  \end{picture}%
+\endgroup%
