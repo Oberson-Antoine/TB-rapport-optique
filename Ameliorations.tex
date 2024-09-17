@@ -205,4 +205,52 @@ Le code de l'arduino est consultable en \autoref{code:arduino_mesure}.
 \end{figure}
 
 \newpage
+Le PCB réalisé au sein de l'école est populé de la façon suivante:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = \textwidth]{assets/figures/ameliorations/PCB_mesure_Annoté.png}
+    \caption[Photo du PCB du système de mesure]{Photo du PCB du système de mesure}
+\end{figure}
+
+La liste des pièces pour populer ce PCB est la suivante :
+\begin{itemize}
+    \item 1 - Arduino Nano - ici un Vellman WPB102
+    \item 1 - switch de fin de course
+    \item 1 - driver drv8825
+    \item 1 - alimentation 9V
+    \item 1 - Moteur 28byj-48 et sa board ULN2003
+    \item 1 - Moteur 36H22HM-0404A15-Z
+    \item 1 - connecteur femmelle JST 6 pin pas de 2.54mm
+    \item 1 - Connecteur femelle JST 4 pin pas de 2.54mm
+    \item 1 - Connecteur mâle cavalier 2 pin
+\end{itemize}
+
+À noter que le connecteur du moteur de translation possède un adaptateur, ceci est dû à une erreur de conception, cette erreur est corrigée
+dans les fichiers fournis en annexe.
+
+Concernant le driver drv 8825, il convient de régler la limite de courant que sera envoyée au moteur pas-à-pas, la marche à suivre est trouvable \href{https://www.pololu.com/product/2133}{ici}.\footnotemark
+
+\footnotetext{\href{https://www.pololu.com/product/2133}{https://www.pololu.com/product/2133}}
+
 \subsection{Programme Matlab de mesure}
+Comme dit précédemment, le programme pour réaliser les mesures des écrans a été réalisé sous Matlab à l'aide de la fonction "App Designer", l'interface est la suivante:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = \textwidth]{assets/figures/ameliorations/capture interface.png}
+    \caption{Interface programme de mesure}
+\end{figure}
+Pour fonctionner, le programme a besoin de :
+\begin{itemize}
+    \item l'addon matlab Arduino
+    \item Du programme WFS de throlabs \cite{WFS_thorlabs_site}
+    \item du fichier polzer.m
+    \item du fichier indzer.m
+    \item du fichier polzer\_array.mat
+    \item du fichier thorlabswfs.m
+\end{itemize}
+
+Le fonctionnement du programme se base sur des boutons qui déclenchent des fonctions Callbacks, donc pas de boucle principale,
+ni de fonctionnement séquentiel, dans cette section il conviendra donc d'expliquer le fonctionnement et la logique derrière le processus
+de mesure, pour le reste le code source est normalement suffisement bien documenté.
+\newpage
