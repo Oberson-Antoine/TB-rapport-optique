@@ -254,3 +254,34 @@ Le fonctionnement du programme se base sur des boutons qui déclenchent des fonc
 ni de fonctionnement séquentiel, dans cette section il conviendra donc d'expliquer le fonctionnement et la logique derrière le processus
 de mesure, pour le reste le code source est normalement suffisement bien documenté.
 \newpage
+
+\section{Fabrication des écrans}
+Comme dit dans la \autoref{sec:etat de lart}, la solution sera développée autour d'une buse d'atomisation pneumatique.
+Cette dernière provient du fournisseur \href{https://www.spray.com/fr-eu}{Spraying Systems Co}\footnotemark.
+
+Le model séléctionné est le corps de buse \textbf{B1/4JN-SS} et la tête de buse \textbf{SU1-SS } qui fournira une projection en cône plein.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.5\textwidth]{assets/figures/ameliorations/J_Series_1_8JN_and_1_4JN.jpeg}
+    \caption[Buse B1/4JN-SS]{Buse B1/4JN-SS \cite{image_buse_spray_com}}
+\end{figure}
+Les raccords sur la le corps de la buse sont en BSPT 1/4 (donc 1/4 cônique), la buse est aussi équipée d'une aiguille de coupure manuelle du flux de liquide.
+En partant donc de la machine originelle, le croquis de concept suivant a été développé:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.8\textwidth]{assets/figures/ameliorations/Croquis_machine_ecran_ver_1.png}
+    \caption[Croquis nouvelle machine de spray ver. 1]{Croquis de la nouvelle machine de spray version 1}
+\end{figure}
+
+Cette buse est normalement capable de fonctionner uniquement avec de l'air comprimé qui créera une siphon aspirant le liquide à projeter d'une façon analogue à l'aérographe,
+Malheureusement après des test préliminaires en connectant simplement la buse au système d'air de l'école et en essayant d'aspirer de l'eau, on a pu vite se rendre compte que la
+configuration en siphon était problématique, en effet l'eau entrait dans la buse et était projetée une fraction de seconde avant d'être violement renvoyée dans le tuyaux d'entrée.
+Il a fallu donc s'entretenir avec un conseillé de \textbf{Spraying System Co}, qui nous a donc conseillé d'utiliser une pompe péristaltique pour pousser le liquide dans la buse,
+Aboutissant alors au second concept de la machine :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.9\textwidth]{assets/figures/ameliorations/Croquis_machine_ecran_ver_2.png}
+    \caption[Croquis nouvelle machine de spray ver. 2]{Croquis de la nouvelle machine de spray version 2}
+\end{figure}
+
+\footnotetext{\href{https://www.spray.com/fr-eu}{https://www.spray.com/fr-eu}}
