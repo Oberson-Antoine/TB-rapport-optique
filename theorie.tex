@@ -114,6 +114,32 @@ il est possible d'en distinguer 4 types :
 \footnotetext{\cite{thèse_laurent_turbulence_types}\fullcite{thèse_laurent_turbulence_types}}
 
 \newpage
+\subsubsection{Illustration des effets des turbulences}
+
+Pour illuster concrêtement les effets les effets des turbulences, ainsi que donner une idée de l'impact de la valeur du seeing sur la PSF\footnotemark (Point Spead Function) d'un téléscope
+:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{assets/figures/théorie/PSF_parfaite.png}
+  \caption[PSF parfaite]{PSF parfaite d’un télescope de 1m de diamètre, longueur d'onde 500 nm}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{assets/figures/théorie/PSF_seeing_1second.png}
+  \caption[PSF avec seeing 1"]{PSF du même télescope, avec image instantanée pour un seeing de 1"}
+\end{figure}
+\footnotetext{La PSF décrit la distribution d’intensité de la lumière provenant d’un point source.}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{assets/figures/théorie/PSF_turbulente.png}
+  \caption[PSF turbulente]{PSF turbulente, longue exposition}
+\end{figure}
+
+Il est donc possible d'observer l'impact de la turbulence sur une image instantanée et sur une image à longue exposition, cela résultera en une perte de détails et donc à une image
+finale beaucoup plus douce.
+
+
 \subsection{Front d'onde et coefficients de Zernike}
 \subsubsection{Front d'onde}
 Un front d’onde est une surface imaginaire qui relie tous les points d’une onde ayant la même phase à un instant donné.
@@ -151,7 +177,7 @@ Pour mesurer le front d'onde, on emploie un \textbf{capteur de front d'onde Shac
 \end{figure}
 \footnotetext{\fullcite{WFS_thorlabs_site}}
 
-\newpage
+
 Le principe de fonctionnement d'un capteur de Shack-Hartmann est le suivant :
 
 \begin{figure}[H]
@@ -169,7 +195,7 @@ Le principe de fonctionnement d'un capteur de Shack-Hartmann est le suivant :
 Ce capteur nous est donc utile, car ce dernier permet de mesurer et de représenter le front d'onde du laser, il retourne aussi les coefficients de
 Zernike du front d'onde.
 
-
+\newpage
 \subsubsection{Coefficients de Zernike}
 
 Les coefficients de Zernike sont issus des polynomes de Zernike, ces derniers
