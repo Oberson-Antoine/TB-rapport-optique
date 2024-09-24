@@ -44,6 +44,40 @@ Tout ces éléments sont contrôlés par un PCB et un arduino nano :
   \caption[PCB machine initiale]{PCB de la machine initiale et légende de chaque boutons}\label{PCB_machine_initial}
 \end{figure}
 
+\newpage
 \section{Problèmes avec la machine}
 En effet, la machine d'origine présente plusieurs inconvénients.
 \subsection{Aérographe}
+\subsubsection{Motorisation}
+Comme montré dans la \autoref{fig:robotisations_aerographe}, l'aérographe est robotisé avec un moteur DC pour contrôler l'aiguille et un servo moteur pour activer
+ou désactiver la projection de liquide. Ces deux éléments sont capricieux, le moteur DC de l'aiguille est relié à un encodeur (pour calculer la position de l'aiguille) à l'aide de deux petits engrenages en
+plastique, ces engrenanges en plastiques étant tout petits ils se sont usés, en plus de cela l'encodeur est monté seulement par compression sur le support du moteur, donc au fil des utilisations, les efforts
+normaux des engrenages repoussent l'encodeur, le moteur ne sait donc plus où il se trouve et se met à tourner indéfiniment.
+
+De plus la pièce qui tient le moteur et qui se fixe sur l'aérographe n'exerce pas assez de pression sur ce dernier, si l'aiguille résiste lors de son mouvement
+la pièce de support se délogera de son emplacement :
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 0.5\textwidth]{assets/figures/situation_initiale/moteur_desolidarisation_aerographe.png}
+  \caption{Support moteur désolidarisé}
+\end{figure}
+
+
+\newpage
+\subsubsection{État général}
+Concernant l'état général de l'aérographe, ce dernier n'est pas idéal.
+Le joint de la tête de projection est en bout de vie, il fuit et fait des bulles lors de l'utilisation de la machine:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 0.5\textwidth]{assets/figures/situation_initiale/joint_aerographe_HS.png}
+  \caption{Joint sec et craquelé}
+\end{figure}
+
+Le support de l'aérographe qui permet de maintenir ce dernier sur le profilé alu du caisson de la machine est craqué,
+ce dernier ne remplis plus sa fonction, l'aérographe bouge dans tout les sens et tourne sur lui-même :
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 0.5\textwidth]{assets/figures/situation_initiale/support_aerographe_casse.png}
+  \caption{Support aérographe cassé}
+\end{figure}
