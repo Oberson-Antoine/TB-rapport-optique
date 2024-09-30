@@ -3,8 +3,7 @@
 %\section{État de l'art}
 \section{Méthodes de projection de liquides}\label{sec:etat de lart}
 \subsection{Bombe spray}
-Pour constituer des écrans de turbulence aisément, l'approche de la bombe de spray pour les cheveux
-, ou de laque transparente pour surfaces a été employée.
+Pour constituer des écrans de turbulence aisément, l'approche de la bombe de spray pour les cheveux, ou de laque transparente pour surfaces a été employée.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.3\textwidth,trim={4cm 0 4cm 0},clip]{assets/figures/etat_art/airspray.jpeg}
@@ -13,7 +12,7 @@ Pour constituer des écrans de turbulence aisément, l'approche de la bombe de s
 \end{figure}
 Cette solution étant assez sommaire et peu reproductible, elle a été abandonnée au profit de méthodes plus contrôlables.
 La durée du "pschit" est sujette à l'erreur humaine, la quantité de liquide projetée
-dépend directement de la durée d'appui mais aussi de la pression du gaz de la bombe, cette
+dépend directement de la durée d'appui, mais aussi de la pression du gaz de la bombe, cette
 dernière diminuant au fil des usages et variant en fonction de la température et de l'altitude,
 explique pourquoi cette solution ne fut pas sélectionnée.
 
@@ -35,7 +34,7 @@ explique pourquoi cette solution ne fut pas sélectionnée.
 
 \newpage
 \subsection{Aérographe} \label{section_aerographe}
-L'aérographe est un pistolet à peinture miniature similaire à un pistolet généralement utilisé pour les traveaux de précision
+L'aérographe est un pistolet à peinture miniature similaire à un pistolet généralement utilisé pour les travaux de précision
 à peinture utilisé par les carrossiers.
 Ces derniers sont généralement alimentés à l'aide d'un compresseur et peuvent projeter plusieurs médiums.
 
@@ -47,18 +46,18 @@ Ces derniers sont généralement alimentés à l'aide d'un compresseur et peuven
 \footnotetext{\url{http://ingo-karkat.de/textilepainting/About\%20used\%20tools/index.html}}
 
 L'aérographe repose sur l'effet venturi, l'air comprimé entraine le liquide à projeter dans l'embouchure assez fine de l'outil
-transformant ce dernier en goutelettes plus ou moins fines en fonction du réglage de l'aiguille de l'outil.
+transformant ce dernier en gouttelettes plus ou moins fines en fonction du réglage de l'aiguille de l'outil.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{assets/figures/etat_art/effet_venturi_aerographe.jpg}
-    \caption[Effet venturi dans aérographe]{Effet venturi dans aérographe \cite{venturi_airbrush}\footnotemark}
+    \caption[Effet venturi dans un aérographe]{Effet venturi dans aérographe \cite{venturi_airbrush}\footnotemark}
 \end{figure}
 \footnotetext{\url{https://upload.wikimedia.org/wikipedia/commons/1/1e/Nebulizzatoe\_concentrico.png}}
 
-C'est la solution de projection selectionnée dans la machine actuelle, il a pour avantage, d'être réglable assez finement
-et de ne nécessiter qu'un compresseur, le critère de selection principal lors du choix effectué par le concepteur de la machine
-était la disponibilité de l'outil de façon rapide en l'empruntant à un tier.
+C'est la solution de projection sélectionnée dans la machine actuelle, il a pour avantage, d'être réglable assez finement
+et de ne nécessiter qu'un compresseur, le critère de sélection principal lors du choix effectué par le concepteur de la machine
+était la disponibilité de l'outil de façon rapide en l'empruntant à un tiers.
 
 % Please add the following required packages to your document preamble:
 % \usepackage[table,xcdraw]{xcolor}
@@ -79,7 +78,7 @@ et de ne nécessiter qu'un compresseur, le critère de selection principal lors 
 \end{table}
 \subsection{Atomiseurs pneumatiques}
 Les atomiseurs pneumatiques reposent sur le même principe de fonctionnement que l'aérographe de la \autoref{section_aerographe}, donc avec effet
-venturi et une aiguille pour régler la taille des goutelettes.
+venturi et une aiguille pour régler la taille des gouttelettes.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{assets/figures/etat_art/atomizing_nozzle.jpg}
@@ -87,7 +86,7 @@ venturi et une aiguille pour régler la taille des goutelettes.
 \end{figure}
 \footnotetext{\url{https://www.nozzlespray.com/uploads/allimg/220310/atomizingfogspraynozzlefordisinfection.jpg}}
 
-Ces buses d'atomisation à air comprimé sont utilisées dans l'industrie pour recouvrir des surfaces (peinture), nettoyer avec de l'eau, dans la confection d'aliments et bien d'autre:
+Ces buses d'atomisation à air comprimé sont utilisées dans l'industrie pour recouvrir des surfaces (peinture), nettoyer avec de l'eau, dans la confection d'aliments et bien d'autres:
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{assets/figures/etat_art/buse spray.jpeg}
@@ -103,9 +102,9 @@ Elles permettent un choix de formes de projection assez vaste :
 \end{figure}
 \footnotetext{\url{https://ae01.alicdn.com/kf/H428bb75251884fee8f19beffbbd38cfdp.jpg}}
 C'est une piste de solution intéressante, elle fait déjà ses preuves dans plusieurs industries différentes.
-L'activation du spray devra se faire de façon externe avec une electrovanne par exemple. Concernant la gestion de la taille
-des goutelettes il faudra automatiser l'actionnement de l'aiguille. Concernant un point important pour ce type de matériel industriel est le prix,
-des fournisseurs chinois pratiqueront des prix dans l'ordre de 10-20 frs, tandis que des fournisseurs traditionnels se situent plus dans les 300-800 frs. Il n'y semble
+L'activation du spray devra se faire de façon externe avec une électrovanne par exemple. Concernant la gestion de la taille
+des gouttelettes, il faudra automatiser l'actionnement de l'aiguille. Concernant un point important pour ce type de matériel industriel, le prix,
+des fournisseurs chinois pratiqueront des prix dans l'ordre de 10-20 frs, tandis que des fournisseurs traditionnels se situent plus dans les 300-800 frs. Il ne semble
 pas y avoir de milieu de gamme.
 
 % Please add the following required packages to your document preamble:
@@ -129,3 +128,11 @@ pas y avoir de milieu de gamme.
     \caption{Résumé des avantages et inconvénients de l'atomiseur pneumatique}
     \label{tab:atomiseur_pneumatique_table}
 \end{table}
+
+\newpage
+
+\section{Liquides à projeter}
+Dans cette partie de l'état de l'art, nous allons passer en revue les matériaux projetables sur les disques en acrylique.
+La boîte de matériel du concepteur de la machine d'origine contenait déjà certains matériaux de cette section.
+
+\subsection{}

@@ -3,10 +3,10 @@ Cette section parcourt les notions fondamentales d'optique pour comprendre la su
 
 \subsection{Le seeing astronomique}
 Le seeing, de l'anglais du mot vision (plutôt de l'action de voir), est le mot utilisé pour parler de la dégradation de l'image
-d'un objet astronomique par les turbulences atmosphériques, plus concrêtement cela se traduit pour un effet de flou et de distortion sur l'image.
+d'un objet astronomique par les turbulences atmosphériques, plus concrètement cela se traduit pour un effet de flou et de distorsion sur l'image.
 
 L'atmosphère est composée de plusieurs couches d'air aux densités et températures différentes, qui ont pour effet de modifier leurs coefficients de réfraction, la lumière devra donc passer
-dans des couches aux indices de réfraction différents, causant alors des refractions de la lumière non uniformes.
+dans des couches aux indices de réfraction différents, causant alors des réfractions de la lumière non uniformes.
 
 Le seeing peut être quantifié en seconde d'arc du disque de seeing, le diamètre de ce disque est égal à la \textbf{largeur à mis-hauteur} de l'intensité lumineuse :
 \begin{figure}[H]
@@ -18,8 +18,8 @@ Le seeing peut être quantifié en seconde d'arc du disque de seeing, le diamèt
 \footnotetext{\fullcite{largeur_mis_hauteur}}
 Un seeing étant $\leq  0.4$' d'arc est considéré comme excellant, au DAG le seeing est usuellement de 0.9'.
 
-Une autre façon de quantifier le seeing est le paramètre de fried $\mathbf{r_0}$. Pour expliquer le paramètre $r_0$, c'est le diamètre en cm qu'aurait un téléscope
-qui fournirait, en l'absence de turbulences, la même image que notre téléscope en présence de turbulences. C'est ce paramètre $r_0$ qui sera utilisé en suite pour caractériser les écrans de phase.
+Une autre façon de quantifier le seeing est le paramètre de Fried $\mathbf{r_0}$. Pour expliquer le paramètre $r_0$, c'est le diamètre en cm qu'aurait un télescope
+qui fournirait, en l'absence de turbulences, la même image que notre télescope en présence de turbulences. C'est ce paramètre $r_0$ qui sera utilisé en suite pour caractériser les écrans de phase.
 
 La formule qui sera utilisée dans le calcul du paramètre de Fried sera :
 \begin{equation}
@@ -31,7 +31,7 @@ Où :
   \item $\sigma_{a_j}^2$ = la variance des coefficients de Zernike j
   \item  $F(j)$ = \color{red} TROUVER NOM \color{black}
   \item $D$ = diamètre du laser
-  \item $r_0$ = paramètre de fried
+  \item $r_0$ = paramètre de Fried
 \end{itemize}
 
 \subsection{Les turbulences atmosphériques}
@@ -39,10 +39,10 @@ Où :
 \subsubsection{Cause physique}
 L'atmosphère de notre planète n'est pas un bloc homogène, cette dernière est composée de \textbf{masses d'air}. Ces masses d'air
 sont des zones de l'atmosphère où les conditions de température, de pression et d'humidité sont homogènes \cite{masse_air_wiki}\cite{masse_air_unige}.
-L'écoulement de ces zones se fait en régime turbulent à des vitesses usuellements mesurées entre 1 et 20 m/s sur des longueurs de 10 à 1000m, ce phénomène
-turbulent des mouvements de masses d'air sera qualifié de \textbf{turbulance dynamique} dans la suite de ce rapport.
+L'écoulement de ces zones se fait en régime turbulent à des vitesses usuellement mesurées entre 1 et 20 m/s sur des longueurs de 10 à 1000m, ce phénomène
+turbulent des mouvements de masses d'air sera qualifié de \textbf{turbulence dynamique} dans la suite de ce rapport.
 
-Cette turbulence dynamique (la vitesse de l'écoulement ) n'a pas d'incidence directe sur la propagation des ondes lumineuses, seul l'indice de réfraction de l'atmosphère influence la propagation
+Cette turbulence dynamique (la vitesse de l'écoulement) n'a pas d'incidence directe sur la propagation des ondes lumineuses, seul l'indice de réfraction de l'atmosphère influence la propagation
 de la lumière. L'indice de réfraction est influencé par la densité de l'air selon la loi de Dale-Gladstone:
 
 % \begin{equation}
@@ -72,7 +72,7 @@ Où:
 
 Pour aller plus loin, c'est généralement la température qui aura une grande influence sur l'indice de réfraction de l'air
 et non la pression, car cette dernière est constante dans toute l'épaisseur d'une couche turbulente. Cette perturbation d'indice de
-réfraction entre les couches turbulantes est donc la source des \textbf{Turbulences optiques}\cite{thèse_laurent_turbulence}.
+réfraction entre les couches turbulentes est donc la source des \textbf{Turbulences optiques}\cite{thèse_laurent_turbulence}.
 
 \newpage
 \subsubsection{Types de turbulences}
@@ -84,25 +84,25 @@ il est possible d'en distinguer 4 types :
   \begin{itemize}
     \item \textbf{1. Turbulence de coupole :}
           \newline
-          Elle apparait lorsque l'air n'a pas la même température à l'interieur et à l'extérieur de la coupole (du téléscope). Cette dernière
+          Elle apparaît lorsque l'air n'a pas la même température à l'intérieur et à l'extérieur de la coupole (du télescope). Cette dernière
           correspond à la turbulence du miroir.
 
     \item \textbf{2. Turbulence de surface :}
           \newline
-          Active sur les premiers 10 à 100m. Elle doit son origine au refroidissement - par convection - du sol chauffé par le rayonnement solaire.
-          Typiquement, elle atteint un minimum juste après le lever du Soleil, puis augmente régulièrement jusqu'au début de l'après-midi. Elle décroit
-          ensuite pour atteindre un second minimum après le coucher du Soleil, puis augmente légèrement durant la nuit. Le moyen de minimiser au maximum cette turbulence
-          est le choix du site d'installation du téléscope. Par exemple placer le téléscope en haut d'une tour loin de toute surface minimisera le phénomène.
+          Active sur les premiers 10 à 100m. Elle doit son origine au refroidissement par convection du sol chauffé par le rayonnement solaire.
+          Typiquement, elle atteint un minimum juste après le lever du soleil, puis augmente régulièrement jusqu'au début de l'après-midi. Elle décroit
+          ensuite pour atteindre un second minimum après le coucher du soleil, puis augmente légèrement durant la nuit. Le moyen de minimiser au maximum cette turbulence
+          est le choix du site d'installation du télescope. Par exemple, placer le télescope en haut d'une tour loin de toute surface minimisera le phénomène.
 
     \item \textbf{3. Turbulence de moyenne altitude 1-5/6 Km :}
           \newline
-          Elle trouve son origine à la fois dans les perturbations orographiques (onde générées par les reliefs) des courants atmosphériques et dans les instabilités thermiques
+          Elle trouve son origine à la fois dans les perturbations orographiques (ondes générées par les reliefs) des courants atmosphériques et dans les instabilités thermiques
           de l'atmosphère. Elle est constituée par une multitude de fines couches turbulentes de quelques centaines de mètres d'épaisseur. Ici encore, seule la sélection du site d'accueil est susceptible
           de minimiser cette composante.
 
     \item \textbf{4. Turbulence de tropopause et stratosphérique :}
           \newline
-          Au delà de $\approx 6 $Km, on observe une certaine systématique pour la plupart des sites :
+          Au-delà de $\approx 6 $Km, on observe une certaine systématique pour la plupart des sites :
           la turbulence atteint un minimum entre 6 et 10 Km, puis augmente à nouveau pour atteindre un maximum dans la tropopause (zone de transition entre la troposphère et la stratosphère), 10-20 Km. Cette couche
           turbulente est due à la présence de forts vents cisaillant l'atmosphère, très fréquents à la limite de la troposphère. La turbulence optique diminue en suite dans la stratosphère, pour finalement disparaître
           au-delà de 25 à 30 Km d'altitude.
@@ -116,12 +116,12 @@ il est possible d'en distinguer 4 types :
 \newpage
 \subsubsection{Illustration des effets des turbulences}
 
-Pour illuster concrêtement les effets les effets des turbulences, ainsi que donner une idée de l'impact de la valeur du seeing sur la PSF\footnotemark (Point Spead Function) d'un téléscope
+Pour illustrer concrètement les effets des turbulences, ainsi que donner une idée de l'impact de la valeur du seeing sur la PSF\footnotemark (Point Spead Function) d'un télescope
 :
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{assets/figures/théorie/PSF_parfaite.png}
-  \caption[PSF parfaite]{PSF parfaite d’un télescope de 1m de diamètre, longueur d'onde 500 nm}
+  \caption[PSF parfaite]{PSF parfaite d\textquotesingle un télescope de 1m de diamètre, longueur d'onde 500 nm}
 \end{figure}
 
 \begin{figure}[H]
@@ -129,7 +129,7 @@ Pour illuster concrêtement les effets les effets des turbulences, ainsi que don
   \includegraphics[width=0.5\textwidth]{assets/figures/théorie/PSF_seeing_1second.png}
   \caption[PSF avec seeing 1"]{PSF du même télescope, avec image instantanée pour un seeing de 1"}
 \end{figure}
-\footnotetext{La PSF décrit la distribution d’intensité de la lumière provenant d’un point source.}
+\footnotetext{La PSF décrit la distribution d\textquotesingle intensité de la lumière provenant d\textquotesingle un point source.}
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{assets/figures/théorie/PSF_turbulente.png}
@@ -142,16 +142,16 @@ finale beaucoup plus douce.
 
 \subsection{Front d'onde et coefficients de Zernike}
 \subsubsection{Front d'onde}
-Un front d’onde est une surface imaginaire qui relie tous les points d’une onde ayant la même phase à un instant donné.
-Pour la lumière, cela signifie que tous les points sur un front d’onde ont parcouru la même distance depuis la source lumineuse et oscillent en phase.
-Le front d'onde est perpendiculaire à la direction de la lumière, donc une refraction modifiera de manière prédictible le front d'onde :
+Un front d'onde est une surface imaginaire qui relie tous les points d'une onde ayant la même phase à un instant donné.
+Pour la lumière, cela signifie que tous les points sur un front d'onde ont parcouru la même distance depuis la source lumineuse et oscillent en phase.
+Le front d'onde est perpendiculaire à la direction de la lumière, donc une réfraction modifiera de manière prédictible le front d'onde :
 
 \begin{figure}[H]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.75\linewidth]{assets/figures/théorie/wavefront_representation.png}
-    \caption{Representation du front d'onde perpendiculaire}
+    \caption{Représentation du front d'onde perpendiculaire}
     \label{fig:front_onde_perp}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
@@ -188,9 +188,9 @@ Le principe de fonctionnement d'un capteur de Shack-Hartmann est le suivant :
 \end{figure}
 \footnotetext{\fullcite{WFS_thorlabs_site}}
 
-\say{Un capteur de Shack-Hartmann consiste en une grille de lentilles et une caméra. Quand un front d'onde entre dans la matrice de lentilles,
-  un champs de point est créé sur la caméra. L'intensité et la position de chaque point est analysé pour mesurer dynamiquement le front d'onde
-  de sources laser ou de caractériser la distortion de front d'onde causée par des composants optiques.}\footnotemark[5]
+\say{ Un capteur de Shack-Hartmann consiste en une grille de lentilles et une caméra. Quand un front d'onde entre dans la matrice de lentilles,
+  un champ de points est créé sur la caméra. L'intensité et la position de chaque point sont analysées pour mesurer dynamiquement le front d'onde
+  de sources laser ou pour caractériser la distorsion de front d'onde causée par des composants optiques. }\footnotemark[5]
 
 Ce capteur nous est donc utile, car ce dernier permet de mesurer et de représenter le front d'onde du laser, il retourne aussi les coefficients de
 Zernike du front d'onde.
@@ -198,26 +198,26 @@ Zernike du front d'onde.
 \newpage
 \subsubsection{Coefficients de Zernike}
 
-Les coefficients de Zernike sont issus des polynomes de Zernike, ces derniers
+Les coefficients de Zernike sont issus des polynômes de Zernike, ces derniers
 permettent de décrire n'importe quelle surface dans un domaine circulaire.
 \begin{figure}[H]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=1\linewidth]{assets/figures/théorie/Zernike-polynomials-equations.png}
-    \caption{Formules des polynomes de Zernike}
+    \caption{Formules des polynômes de Zernike}
     \label{fig:formules_poly_Zernike}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=.75\linewidth]{assets/figures/théorie/zernike_polynomes_plots.png}
-    \caption{Représentation des polynomes de Zernike}
+    \caption{Représentation des polynômes de Zernike}
     \label{fig:plots_des_polynomes_Zernike}
   \end{subfigure}
-  \caption[Illustration polynomes de Zernike]{Illustration polynomes de Zernike \cite{Zernike_docteur_Damien}\footnotemark}
+  \caption[Illustration polynômes de Zernike]{Illustration polynômes de Zernike \cite{Zernike_docteur_Damien}\footnotemark}
   \label{fig:illu_poly_Zernike}
 \end{figure}
 
 \footnotetext{\fullcite{Zernike_docteur_Damien}}
 
-Pour reconstruire le front d'onde il suffit alors de sommer les fronts d'ondes des coefficients de zernike i j.
+Pour reconstruire le front d'onde il suffit alors de sommer les fronts d'ondes des coefficients de Zernike i j.

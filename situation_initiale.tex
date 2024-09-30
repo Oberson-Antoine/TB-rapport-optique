@@ -8,7 +8,7 @@ Voici ci-dessous, la structure originale de la machine au commencement de ce pro
 
 \newpage
 La machine de projection se basait sur un aérographe robotisé, où des moteurs géraient les parties mobiles
-de l'aérographe qui seraient normalement actionnée à la main :
+de l'aérographe qui seraient normalement actionnées à la main :
 \begin{figure}[H]
   \centering
   \begin{subfigure}{.35\textwidth}
@@ -20,14 +20,14 @@ de l'aérographe qui seraient normalement actionnée à la main :
   \begin{subfigure}{.65\textwidth}
     \centering
     \includegraphics[width=.75\linewidth]{assets/figures/situation_initiale/Robotisation_projection.png}
-    \caption{Robotisation du button d'activation du spray}
+    \caption{Robotisation du bouton d'activation du spray}
     \label{fig:robot_spray}
   \end{subfigure}
   \caption{Différentes robotisations de la machine originale}
   \label{fig:robotisations_aerographe}
 \end{figure}
 
-Un moteur pas-à-pas de type \textbf{28byj-48}, est situé en bas de l'appareil, ce dernier sert à faire tourner l'écran sur lui même,
+Un moteur pas-à-pas de type \textbf{28byj-48}, est situé en bas de l'appareil, ce dernier sert à faire tourner l'écran sur lui-même,
 c'est donc aussi où l'écran sera disposé lors de sa fabrication:
 \begin{figure}[H]
   \centering
@@ -37,11 +37,11 @@ c'est donc aussi où l'écran sera disposé lors de sa fabrication:
 \end{figure}
 
 \newpage
-Tout ces éléments sont contrôlés par un PCB et un arduino nano :
+Tous ces éléments sont contrôlés par un PCB et un Arduino nano :
 \begin{figure}[H]
   \centering
   \includegraphics[width = 0.8\textwidth]{assets/figures/situation_initiale/PCB_machine_originale.png}
-  \caption[PCB machine initiale]{PCB de la machine initiale et légende de chaque boutons}\label{PCB_machine_initial}
+  \caption[PCB machine initiale]{PCB de la machine initiale et légende de chaque bouton}\label{PCB_machine_initial}
 \end{figure}
 
 \newpage
@@ -51,10 +51,10 @@ En effet, la machine d'origine présente plusieurs inconvénients.
 \subsubsection{Motorisation}
 Comme montré dans la \autoref{fig:robotisations_aerographe}, l'aérographe est robotisé avec un moteur DC pour contrôler l'aiguille et un servo moteur pour activer
 ou désactiver la projection de liquide. Ces deux éléments sont capricieux, le moteur DC de l'aiguille est relié à un encodeur (pour calculer la position de l'aiguille) à l'aide de deux petits engrenages en
-plastique, ces engrenages en plastiques étant tout petits ils se sont usés, en plus de cela l'encodeur est monté seulement par compression sur le support du moteur, donc au fil des utilisations, les efforts
+plastique, ces engrenages en plastiques étant tout petits, ils se sont usés, en plus de cela l'encodeur est monté seulement par compression sur le support du moteur, donc au fil des utilisations, les efforts
 normaux des engrenages repoussent l'encodeur, le moteur ne sait donc plus où il se trouve et se met à tourner indéfiniment.
 
-De plus la pièce qui tient le moteur et qui se fixe sur l'aérographe n'exerce pas assez de pression sur ce dernier, si l'aiguille résiste lors de son mouvement
+De plus, la pièce qui tient le moteur et qui se fixe sur l'aérographe n'exerce pas assez de pression sur ce dernier, si l'aiguille résiste lors de son mouvement,
 la pièce de support se délogera de son emplacement :
 
 \begin{figure}[H]
@@ -75,34 +75,34 @@ Le joint de la tête de projection est en bout de vie, il fuit et fait des bulle
 \end{figure}
 
 Le support de l'aérographe qui permet de maintenir ce dernier sur le profilé alu du caisson de la machine est craqué,
-ce dernier ne remplis plus sa fonction, l'aérographe bouge dans tout les sens et tourne sur lui-même :
+ce dernier ne remplit plus sa fonction, l'aérographe bouge dans tous les sens et tourne sur lui-même :
 \begin{figure}[H]
   \centering
   \includegraphics[width = 0.5\textwidth]{assets/figures/situation_initiale/support_aerographe_casse.png}
   \caption{Support aérographe cassé}
 \end{figure}
-En plus de cela, l'aérographe n'est pas conçu pour fonctionner avec un réservoir de liquude externe, il a fallu adapter ce dernier avec un tube plastique.
-Il faut aussi savoir que raccorder l'aérographe au système d'air comprimé de l'école n'est pas possible sans une multitudes d'adaptateurs, il a donc fallu emprunter
+En plus de cela, l'aérographe n'est pas conçu pour fonctionner avec un réservoir de liquide externe, il a fallu adapter ce dernier avec un tube plastique.
+Il faut aussi savoir que raccorder l'aérographe au système d'air comprimé de l'école n'est pas possible sans une multitude d'adaptateurs, il a donc fallu emprunter
 un compresseur à l'atelier mécanique.
 
 \newpage
 \subsection{Interface utilisateur}
 Pour contrôler la machine, un circuit imprimé est apposé sur son flanc (c.f \autoref{PCB_machine_initial}).
 À noter que les fonctions des boutons décritent ci-dessus sont hypothétiques, nous n'avons pas pu retrouver le code
-source du microprocesseur pour comprendre plus précisemment les actions de chaques boutons. Il est intéressant de remarquer
-que les fonctions sont bloquantes, si on déclanche le spray, la fonction de spray doit être terminée, ce qui pose certains problèmes :
+source du microprocesseur pour comprendre plus précisément les actions de chaque bouton. Il est intéressant de remarquer
+que les fonctions sont bloquantes: si on déclenche le spray, la fonction de spray doit être terminée, ce qui pose certains problèmes :
 
 \begin{itemize}
   \item Si le capteur de position de l'aiguille est défaillant, le programme reste coincé.
-  \item La fonction "faire tourner le plateau" est inutile car non exécutable lors de la fabrication de l'écran
+  \item La fonction "faire tourner le plateau" est inutile, car non exécutable lors de la fabrication de l'écran.
 \end{itemize}
 
 \subsection{Fonctionnement}
 
-Tout les éléments cités précédemment rendent la fabrication d'écrans fastidieuse, surtout si l'objectif est de manipuler précisemment les paramètres de fabrication.
-Venant s'ajouter à ceci, l'utilisation de l'aérographe à la vertical pose un problème de taille, ce dernier fait des grosses gouttes qui tombent inévitablement sur
-les écrans de phases. Pour contourner ce problème et se familiariser avec la fabrication d'écrans, il été déterminé que retourner la machine pour contrer les gouttes
-soit la meilleure solution avant le dévoleppement de la solution décrite plus tard dans ce rapport.
+Tous les éléments cités précédemment rendent la fabrication d'écrans fastidieuse, surtout si l'objectif est de manipuler précisément les paramètres de fabrication.
+Venant s'ajouter à ceci, l'utilisation de l'aérographe à la verticale pose un problème de taille: ce dernier fait des grosses gouttes qui tombent inévitablement sur
+les écrans de phases. Pour contourner ce problème et se familiariser avec la fabrication d'écrans, il a été déterminé que retourner la machine pour contrer les gouttes
+soit la meilleure solution avant le développement de la solution décrite plus tard dans ce rapport.
 
 \begin{figure}[H]
   \centering
@@ -121,7 +121,7 @@ c'est un des mélanges utilisés par la personne ayant développé le système d
   \caption{Vernis brillant de la marque Lascaux}
 \end{figure}
 
-À ce stade du projet, il a été déterminé que la plage d'exposition aux goutte idéale pour fabriquer un écran de turbulences se situait entre 15 et 20 secondes sur l'ancienne machine.\footnotemark
+À ce stade du projet, il a été déterminé que la plage d'exposition à la brume projetée idéale pour fabriquer un écran de turbulences se situait entre 15 et 20 secondes sur l'ancienne machine.\footnotemark
 Ayant donc pour résultat l'écran suivant :
 \begin{figure}[H]
   \centering
@@ -129,7 +129,7 @@ Ayant donc pour résultat l'écran suivant :
   \caption{Écran de phase considéré comme bon}\label{fig:ecran_phase_beta}
 \end{figure}
 
-\footnotetext{Note personnelle : Cette hypothèse vient du fait d'une incompréhension de ma part, en effet, j'avais compris que l'écran de turbulences se composait d'une surface pas complétement recouverte de vernis, mais plus de goutelette
+\footnotetext{Note personnelle : Cette hypothèse vient du fait d'une incompréhension de ma part, en effet, j'avais compris que l'écran de turbulences se composait d'une surface pas complétement recouverte de vernis, mais plus de gouttelettes
   isolées (mais rapprochées) formant de petites lentilles. Cette hypothèse fut invalidée après discussion avec M. Jolissaint.}
 
 \newpage
@@ -141,17 +141,17 @@ En observant au microscope l'écran de la \autoref{fig:ecran_phase_beta}, on obt
   \includegraphics[width = 0.9\textwidth]{assets/figures/situation_initiale/observation_microscope.png}
   \caption{Observation d'un écran de phase au microscope}\label{fig:ecran_phase_beta_microscope}
 \end{figure}
-Il est donc possible d'observer la taille des goutelettes d'acrylique, et de constater que ces dernières contiennent des bulles d'air microscopiques.
-On peut aussi observer l'espace entre chaques goutelettes ($250\pm 50 \mu m$).
+Il est donc possible d'observer la taille des gouttelettes d'acrylique et de constater que ces dernières contiennent des bulles d'air microscopiques.
+On peut aussi observer l'espace entre chaque gouttelette ($250\pm 50 \mu m$).
 
-Comme dit précédemment ces écrans ont été considérés comme bons à tort, en effet, il faudrait une couche complète d'acrylique sur le plastique, et donc pas une structure sous forme de goutelettes espacées.
+Comme dit précédemment, ces écrans ont été considérés comme bons à tort. En effet, il faudrait une couche complète d'acrylique sur le plastique, et donc pas une structure sous forme de gouttelettes espacées.
 Il sera toutefois intéressant de caractériser les écrans produits par cette première technique avec le programme développé lors de ce projet (c.f \color{red} AJOUTER REF à ANALYSE \color{black}).
 
 \section{Conclusion}
 Pour conclure cette section qui a constitué les premières étapes de la réalisation de ce projet, on peut relever que la machine d'origine bien qu'étant une première itération, nous a permis de se familiariser avec les concepts phares du projet, tels que
-les principes d'optique régissant les turbulences, les notions d'optique nécessaires pour caractériser des écrans, les besoins de l'équipe qui utilisera la machine et biensur se former une idée de la direction à prendre pour améliorer la machine.
+les principes d'optique régissant les turbulences, les notions d'optique nécessaires pour caractériser des écrans, les besoins de l'équipe qui utilisera la machine et bien sûr se former une idée de la direction à prendre pour améliorer la machine.
 
-Concernant les améliorations en voici la liste faite avant la recherche d'une nouvelle solution de projection :
+Concernant les améliorations, en voici la liste faite avant la recherche d'une nouvelle solution de projection :
 \begin{itemize}
   \item Meilleure fixation pour les écrans.
   \item Changer la méthode de projection.
