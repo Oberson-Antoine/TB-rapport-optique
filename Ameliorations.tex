@@ -179,7 +179,7 @@ Donc par exemple pour déclencher un homing la trame envoyée sera :
 Ou pour effectuer une rotation de 130 pas et une translation de 150 pas (si on a fait un tour complet d'écran), la trame est la suivante:
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 1.3]{assets/figures/ameliorations/trame_translation_rotation.png}
+    \includegraphics[scale = 1.2]{assets/figures/ameliorations/trame_translation_rotation.png}
     \caption[Trame translation rotation]{Trame de translation et de rotation pour mesure de l'écran\label{fig:trame_trans_rota}}
 \end{figure}
 
@@ -233,6 +233,27 @@ Concernant le driver drv 8825, il convient de régler la limite de courant que s
 
 \footnotetext{\href{https://www.pololu.com/product/2133}{https://www.pololu.com/product/2133}}
 
+
+\subsection{Machine de mesure}
+Pour acceuillir le PCB et ses organes, il a donc fallu développer le système suivant :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = \textwidth,trim={1cm 5cm 2cm 6cm},clip]{assets/figures/ameliorations/système_mesure_front.jpeg}
+    \caption{Photo du système de mesure final}
+\end{figure}
+
+\newpage
+
+\subsubsection{Fonctionnement}
+Passons en revue le fonctionnement de la fonction de translation:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = \textwidth]{assets/figures/ameliorations/3D_fonctionnement_crémaillère.png}
+    \caption{Image du système de translation}
+\end{figure}
+
+
+\newpage
 \subsection{Programme Matlab de mesure}
 Comme dit précédemment, le programme pour réaliser les mesures des écrans a été réalisé sous Matlab à l'aide de la fonction "App Designer", l'interface est la suivante:
 \begin{figure}[H]
