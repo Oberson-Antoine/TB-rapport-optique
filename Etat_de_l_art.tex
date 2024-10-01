@@ -138,7 +138,7 @@ La boîte de matériel du concepteur de la machine d'origine contenait déjà ce
 Avant de commencer à présenter différentes pistes, il est important de noter, que l'ensembles des liquides proposés auront une finition brillante
 quand ils seront totalement secs, en effet, une finition matte absorberait la lumière ou du moins la diffuserait dans son épaisseur, tandis qu'un aspect brillant
 ne réfléchira qu'une faible partie de la lumière travsersant la surface, tout en restant transparente et donc perméable à la lumière !
-\subsection{Laque transparante d'Acrylique à l'eau}
+\subsection{Laque transparante d'Acrylique à l'eau de Lascaux}
 
 C'est un des matériaux de projection fournis avec la matériel au début du projet, il est produit par la marque \href{https://lascaux.ch/en/start}{Lascaux}\footnotemark \footnotetext{\url{https://lascaux.ch/en/start}}.
 C'est une laque transparente résistante aux UV utilisée pour protéger des peintures à base d'acrylique. Elle est décrite sur la \href{https://lascaux.ch/lascaux-varnishes-and-fixative/lascaux-transparent-varnish-1-uv-gloss}{page produit}\footnotemark
@@ -179,3 +179,140 @@ peut être nettoyé à l'aide d'alcool isopropylique et si la buse de spray se b
     \caption{Table des avantages et inconvénients du vernis Lascaux}
     \label{tab:lascaux_UV}
 \end{table}
+
+\newpage
+\subsection{Vernis acrylique transparant d'Amsterdam}
+Là encore, c'est un des liquides hérités de la boîte de matériel. C'est un vernis acrylique transparant et brillant de la marque \href{https://www.amsterdam-acrylics.com/fr/}{Amsterdam} dont la composition
+n'est pas à base d'eau.
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \includegraphics[width=0.6\linewidth]{assets/figures/etat_art/Amsterdam_vernis_acrylique.png}
+        \caption{Robotisation de la position de l'aiguille}
+        \label{fig:vernis_amsterdam_front}
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \includegraphics[width=0.6\linewidth]{assets/figures/etat_art/Amsterdam_vernis_acrylique_dos.png}
+        \caption{Robotisation du bouton d'activation du spray}
+        \label{fig:vernis_amsterdam_dos}
+    \end{subfigure}
+    \caption{Différentes robotisations de la machine originale}
+    \label{fig:Vernis_amsterdam_photos}
+\end{figure}
+La \href{https://www.amsterdam-acrylics.com/fr/catalogue/amsterdam-protection/vernis-acrylique-brillant-flacon-250ml/}{page produit}\footnotemark est beaucoup moins fournie en détails que celle du vernis Lascaux
+\footnotetext{\url{https://www.amsterdam-acrylics.com/fr/catalogue/amsterdam-protection/vernis-acrylique-brillant-flacon-250ml/}}, il est possible d'apprendre que le vernis est diluable dans de l'essence de pétrol, que le produit
+sec est nettoyable aussi à l'essance de pétrol, qu'il s'applique de préférence avec un pinceau, que comme vu sur la \autoref{fig:vernis_amsterdam_dos} il est: irritant, allergène, toxique pour les organismes aquatiques, peut déclencher
+des vertiges, il est cancérigène ,mais surtout il est extrêment inflammable surtout en aérosol.
+
+Pour résumer ce produit est déjà nocif dans sa forme liquide à appliquer au pinceau il semble alors que le transformer en milliers de petites gouttelettes microscopiques très facilement respirables et se déposant partout
+n'est pas la meilleure des idées.
+
+Pour résumer les avantages et inconvénients :
+
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% Beamer presentation requires \usepackage{colortbl} instead of \usepackage[table,xcdraw]{xcolor}
+\begin{table}[H]
+    \centering
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|}
+            \hline
+            Avantages                        & Inconvénients                                                                 \\ \hline
+            \rowcolor[HTML]{92FAA4}
+            Transparent sous forme liquide   & \cellcolor[HTML]{EB726A}Pas de fiche technique bien documentée                \\ \hline
+            \rowcolor[HTML]{92FAA4}
+            Pas besoin de secouer le liquide & \cellcolor[HTML]{EB726A}Pas de précision quant à l'utilisation d'un spray gun \\ \hline
+            \rowcolor[HTML]{FFFFFF}
+                                             & \cellcolor[HTML]{EB726A}Toxique                                               \\ \hline
+            \rowcolor[HTML]{FFFFFF}
+                                             & \cellcolor[HTML]{EB726A}Extrêmement inflammable                               \\ \hline
+        \end{tabular}%
+    }
+    \caption{Résumé des avantages et inconvénients du vernis Amsterdam}
+    \label{tab:Amsterdam_vernis}
+\end{table}
+
+\newpage
+\subsection{Vernis acrylique transparant pour aérographe de chez StardustColors}
+
+À partir de maintenant, tous les matériaux de projection présentés ne viennent pas de la boîte d'équipement de la machine.
+Le vernis transparent acrylique "top coat" de chez \href{https://www.stardustcolors.co.uk/}{Stardust Colors} est un produit spécialisé
+pour la projection à l'aide d'un aérographe (et méthodes analogues) et selon la \href{https://www.stardustcolors.co.uk/stardust-acrylic-pro-series/1270-airbrush-acrylic-polyurethane-topcoats-matt-satin-or-gloss-3700730801942.html}{page produit}\footnotemark
+\footnotetext{\url{https://www.stardustcolors.co.uk/stardust-acrylic-pro-series/1270-airbrush-acrylic-polyurethane-topcoats-matt-satin-or-gloss-3700730801942.html}}, le produit ne nécessite même pas de dilution pour les tête de buses jusqu'é 0.2mm de diamètre,
+pour diluer ce vernis, le fabricant propose des "thinners" propriétaires et donc à la composition inconnue, il est tout de même précisé dans la datasheet des produits \autoref{fiche_technique_Stardust}
+que la composition des vernis est à base d'eau et qu'elle est non toxique (malgré tout ils recommandent l'utilisation d'un masque).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{assets/figures/etat_art/Stardust_vernis.jpg}
+    \caption[Vernis transparant brillant Stardust Colors]{Vernis transparant brillant Stardust Colors\cite{Bouteille_vernis_stardust}}
+\end{figure}
+À noter que ce produit semble difficilement trouvable en suisse, il conviendrait donc de l'importer en cas de commande.
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% Beamer presentation requires \usepackage{colortbl} instead of \usepackage[table,xcdraw]{xcolor}
+\begin{table}[H]
+    \centering
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|}
+            \hline
+            Avantages                                           & Inconvénients                                               \\ \hline
+            \rowcolor[HTML]{92FAA4}
+            Formule à base d'eau                                & \cellcolor[HTML]{EB726A}Difficilement obtenable en Suisse   \\ \hline
+            \rowcolor[HTML]{92FAA4}
+            Non toxique                                         & \cellcolor[HTML]{EB726A}Dilution avec produit propriétaire  \\ \hline
+            \rowcolor[HTML]{92FAA4}
+            Conçue pour la projection par aérographe            & \cellcolor[HTML]{EB726A}Nettoyage avec produit propriétaire \\ \hline
+            \rowcolor[HTML]{92FAA4}
+            Une fiche technique adéquatement fournie disponible & \cellcolor[HTML]{FFFFFF}                                    \\ \hline
+        \end{tabular}%
+    }
+    \caption{Résumé des avantages et inconvénients du vernis Stardust}
+    \label{tab:Stardust_vernis}
+\end{table}
+\newpage
+\subsection{Vernis acrylique transparent pour aérographe de Createx}
+C'est un produit aux propriétés similaires à celle du produit de Stardust Colors, il a par contre une fiche technique très fournie \autoref{fiche_technique_Createx} et est \href{https://www.airbrush-shop.ch/contents/de-ch/p6000.html}{obtenable} en Suisse.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{assets/figures/etat_art/Createx_bouteille.jpg}
+    \caption[Vernis transparant brillant Createx]{Vernis transparant brillant Createx\cite{Bouteille_Createx}}
+\end{figure}
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% Beamer presentation requires \usepackage{colortbl} instead of \usepackage[table,xcdraw]{xcolor}
+\begin{table}[H]
+    \centering
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|}
+            \hline
+            Avantages                                    & Inconvénients                                               \\ \hline
+            \rowcolor[HTML]{92FAA4}
+            Formule à base d'eau                         & \cellcolor[HTML]{EB726A}Dilution avec produit propriétaire  \\ \hline
+            \rowcolor[HTML]{92FAA4}
+            Non toxique                                  & \cellcolor[HTML]{EB726A}Nettoyage avec produit propriétaire \\ \hline
+            \rowcolor[HTML]{92FAA4}
+            Conçue pour la projection par aérographe     & \cellcolor[HTML]{FFFFFF}                                    \\ \hline
+            \rowcolor[HTML]{92FAA4}
+            Une fiche technique bien fournie disponible  & \cellcolor[HTML]{FFFFFF}                                    \\ \hline
+            \cellcolor[HTML]{92FAA4}Disponible en Suisse & \multicolumn{1}{l|}{}                                       \\ \hline
+        \end{tabular}%
+    }
+    \caption{Résumé des avantages et inconvénients du vernis Createx}
+    \label{tab:Createx_vernis}
+\end{table}
+\section{Conclusion}\label{sec:conclusion_etat_art}
+\subsection{Système de projection}
+Au final, la solution de projection choisie est celle de la \textbf{buse d'atomisation pneumatique}, en effet, ces dernières sont
+munies de connecteurs standardisés et sont grandement employées dans l'industrie, le prix peut être un frein au début, mais il faut
+garder en tête que ce sont des pièces destinées aux professionnels.
+
+\subsection{Liquide à projeter}
+Le liquide à projeté séléctionné est le \textbf{les vernis de chez Lascaux}, comme vu dans la \autoref{tab:lascaux_UV} il présente de nombreux avantages, dont
+un avantage clef, il est disponible directement sans délais, ce sera donc le liquide utilisé dans la future machine mais aussi celui qui a été utilisé lors de
+l'étape de familiarisation avec la machine.
