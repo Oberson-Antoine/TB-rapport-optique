@@ -251,7 +251,70 @@ Passons en revue le fonctionnement de la fonction de translation:
     \includegraphics[width = \textwidth]{assets/figures/ameliorations/3D_fonctionnement_crémaillère.png}
     \caption{Image du système de translation}
 \end{figure}
+La crémaillère est la partie fixe du système qui est reliée à la table optique, le pignon en tournant va alors décaler l'entièreté du système de mesure
+vers la gauche ou la droite.
 
+Le switch de fin de course sert à la fonction de homing du système, cela correspond à la position la plus à l'intérieur du disque
+de phase pour le laser, en suite le système peut se déplacer sur une course de 4cm.
+
+Concernant les resorts de compression, ils sont la pour assurer que la crémaillère ne "déraille" pas et que les dents du pignon rèstent bien plaquées
+contre cette dernière, la plaque de pression est réglable en hauteur à l'aide de deux vis.
+
+\newpage
+\subsubsection{Réglage crémaillère}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = \textwidth]{assets/figures/ameliorations/réglage_crémaillère_système_mesure.jpg}
+    \caption{Réglage de la crémaillère lors du montage}
+\end{figure}
+Avant de fixer totalement le moteur du pignon, il faut bien veiller à ce que le système de crémaillère est bien réglé.
+Comme on peut le voir sur la figure de gauche, il faut que le guide du support à crémaillère soit bien plaqué dans la rainure
+de guidage du système de mesure, en suite comme sur l'image de droite, on peut alors régler la position verticale du pignon
+pour que les dents de ce dernier et celle de la crémaillère soit bien en contact. Après cela, il conviendra d'ajuster la plaque de
+pression pour bien maintenir le tout.
+
+\subsubsection{Fixation de l'écran}
+L'écran se fixe sur la machine de mesure à l'aide d'une vis à main :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = \textwidth]{assets/figures/ameliorations/fixation_écran.png}
+    \caption{Système de fixation de l'écran}
+\end{figure}
+À noter que les trous taraudés sont à faire à la main à l'aide d'un tourne à gauche directement dans le plastique, en effet,
+cela est suffisement solide car l'utilisateur n'est pas censé démonter le moteur de rotation à chaque utilisation de la machine.
+
+\subsubsection{Fixation du système de mesure au banc optique}
+Le support à crémaillère vient se fixer sur un support de table optique à l'aide d'une vis sans tête m6 :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.5\textwidth]{assets/figures/ameliorations/fixation_table_optique.jpg}
+    \caption{Fixation du système de mesure à la table optique}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.6\textwidth,trim = {0 2cm 3cm 3cm},clip]{assets/figures/ameliorations/système_mesure_back.jpeg}
+    \caption{Photo du système sur un support de table optique}
+\end{figure}
+
+\newpage
+\subsubsection{Fabrication du système de mesure}
+Le système de mesure a été conçu avec l'impression 3D en tête, dans cette sous section, nous allons décrire quelques recommandation pour imprimer les pièces.
+Pour la pièce principale, il est recommandé de l'imprimer dans cette orientation :
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.5\textwidth]{assets/figures/ameliorations/orientation_impression_systeme_mesure.png}
+    \caption{Orientation d'impression système de mesure}
+\end{figure}
+Concernant les supports, il faut en mettre partout où il est nécessaire (c.f le projet BambuStudio donné en pièce jointes).
+
+Pour le support à crémaillère l'orientation d'impression est la suivante :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.5\textwidth]{assets/figures/ameliorations/orientation_support_crémaillère.png}
+    \caption{Orientation d'impression du support à crémaillère}
+\end{figure}
+Là aussi il conviendra de mettre des supports partout où il le faut !
 
 \newpage
 \subsection{Programme Matlab de mesure}
