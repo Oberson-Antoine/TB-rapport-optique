@@ -110,6 +110,7 @@ Pour répondre au 1er besoin, nous avons utilisé un moteur pas-à-pas \textbf{2
     \centering
     \includegraphics[width=0.5\textwidth]{assets/figures/ameliorations/stepper.jpeg}
     \caption[Moteur 28byj-48 pas-à-pas et son driver]{Moteur 28byj-48 pas-à-pas et son driver \autocite{photo_28byj-48}}
+    \label{fig:Photo_moteur_28byj-48}
 \end{figure}
 
 Concernant la translation de l'écran, nous avons choisi d'utiliser un moteur pas-à-pas classique \textbf{36H22HM-0404A15-Z} avec un pignon et une crémaillère basée sur les
@@ -340,6 +341,8 @@ de mesure, pour le reste le code source est normalement suffisement bien documen
 \newpage
 
 \section{Fabrication des écrans}
+
+\subsection{Conceptes de machines}
 Comme dit dans la \autoref{sec:etat de lart}, la solution sera développée autour d'une buse d'atomisation pneumatique.
 Cette dernière provient du fournisseur \href{https://www.spray.com/fr-eu}{Spraying Systems Co}\footnotemark.
 Le model séléctionné est le corps de buse \textbf{B1/4JN-SS} et la tête de buse \textbf{SU1-SS } qui fournira une projection en cône plein.
@@ -365,7 +368,137 @@ Aboutissant alors au second concept de la machine :
     \centering
     \includegraphics[width = 0.9\textwidth]{assets/figures/ameliorations/Croquis_machine_ecran_ver_2.png}
     \caption[Croquis nouvelle machine de spray ver. 2]{Croquis de la nouvelle machine de spray version 2}
+    \label{fig:croquis_machine_V2}
 \end{figure}
 
 
 \footnotetext{\href{https://www.spray.com/fr-eu}{https://www.spray.com/fr-eu}}
+Il convient donc de développer concrêtement ce concept sur le caisson de la machine d'origine.
+
+\newpage
+\subsection{Machine de spray finale}
+Cette section aborde le système de spray conçu à partir du concept de la \autoref{fig:croquis_machine_V2}, dont le résultat en 3D est le suivant :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = \textwidth]{assets/figures/ameliorations/3D_machine_spray.png}
+    \caption{3D de la machine de spray}
+\end{figure}
+Et en vrai sur le caisson d'origine :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = \textwidth, trim = {0 0cm 0 4cm}, clip]{assets/figures/ameliorations/photo_machine_de_spray.jpeg}
+    \caption{Photo de la nouvelle machine de spray}
+\end{figure}
+
+\newpage
+\subsection{Solutions développées}
+\subsubsection{PCB de contrôle}
+Un autre PCB sur-mesure double face (cette fois) gravé à l'école fût developpé, ce dernier permet d'acceuillir tout les organes
+nécessaires au contrôle de la machine:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = \textwidth]{assets/figures/ameliorations/PCB_spray_kicad.png}
+    \caption{PCB de la machine de spray (diagramme électrique disponible en \autoref{PCB:spray})}
+\end{figure}
+
+\newpage
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = \textwidth, trim = {0 20cm 0 0}, clip]{assets/figures/ameliorations/PCB_machine_spray.png}
+    \caption{Photo légendée du PCB de la machine de spray}
+\end{figure}
+\begin{enumerate}
+    \item Arduino nano
+    \item Diviseur de tension (réglé pour réduire 24v à 12V) - WPM404 (basé sur LM2596)
+    \item Driver moteur DC - L293d
+    \item Relais de puissance - DSP1-DC5V-F
+    \item Résistance de 10k$\Omega$
+    \item Connecteur moteur DC - 2 pin header p2.54mm mâle
+    \item Connecteur solénoid - 2 pin header p2.54mm mâle
+    \item Connecteur servo moteur - MOLEX kk 3 pin p2.54mm femelle
+    \item Connecteur Serial vers ESP32 - JST 4 pin p2.54mm femelle
+    \item Connecteur moteur pas-à-pas - 6 pin header p2.54 mâle
+    \item Connecteur alimentation 24V - DC barrel jack vertical
+\end{enumerate}
+\begin{itemize}
+    \item EESP32-DevKit ESP-WROOM-32U
+    \item Un moteur 28byj-48 et sa board ULN2003
+    \item Une pompe péristaltique 12V à tyaux de dia ext 4mm et dia int 2mm
+    \item Un servo moteur - TowerPro MG946R
+\end{itemize}
+
+\newpage
+\subsubsection{Contrôle de la machine}
+Le contrôle de la machine se fait au travers d'une interface web gérée par l'\textbf{ESP32} :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = \textwidth]{assets/figures/ameliorations/Inteface_web.png}
+    \caption{Capture de l'interface web de la machine}
+\end{figure}
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+% \usepackage[table,xcdraw]{xcolor}
+% Beamer presentation requires \usepackage{colortbl} instead of \usepackage[table,xcdraw]{xcolor}
+\begin{table}[H]
+    \centering
+    \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|c|c|}
+            \hline
+            Bouton                       & Fonction                                                                                                 \\ \hline
+            \rowcolor[HTML]{C0C0C0}
+            Rotation de l'écran          & Choisir si on veut faire tourner l'écran ou non                                                          \\ \hline
+            \rowcolor[HTML]{C0C0C0}
+            Temps de rotation de l'écran & C'est le temps en secondes durant lequel on fait tourner l'écran                                         \\ \hline
+            \rowcolor[HTML]{C0C0C0}
+            Temps de spray de l'écran    & C'est le temps en secondes durant lequel on vaporise l'écran                                             \\ \hline
+            \rowcolor[HTML]{C0C0C0}
+            Fabriquer l'écran            & {\color[HTML]{343434} Démarre la fabrication de l'écran (NON ARRÊTABLE)}                                 \\ \hline
+            \rowcolor[HTML]{C0C0C0}
+            Serial monitor:              & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}Permet d'afficher les messages de l'arduino}                 \\ \hline
+            \rowcolor[HTML]{C0C0C0}
+            Amorcer pompe                & Maintenir le bouton pour faire rentrer le liquide jusqu'à la buse                                        \\ \hline
+            \rowcolor[HTML]{C0C0C0}
+            Désamorcer pompe             & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}Maintenir le bouton pour faire sortir le liquide de la buse} \\ \hline
+        \end{tabular}%
+    }
+    \caption{Explication des boutons de l'interface WEB}
+    \label{tab:fonction_des_boutons_web}
+\end{table}
+
+\newpage
+Pour se connecter à l'interface de contrôle il faut, se connecter au wifi ouvert \textit{SprayMachine} (actif lorsque la machine est branchée):
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.5\textwidth]{assets/figures/ameliorations/Connection_wifi.png}
+    \caption{Connection au WiFi}
+\end{figure}
+
+En suite, il suffit d'ouvrir son navigateur web préféré et d'entrer une des adresses suivantes :
+\begin{itemize}
+    \item \url{http://spraymachine.local/}
+    \item \url{http://192.168.1.1/}
+    \item \url{http://255.255.255.0/}
+\end{itemize}
+
+\subsubsection{Communication entre l'interface WEB et l'Arduino}
+Avant d'aborder les trames de communication, commençons juste par expliquer / exposer quelles librairies ont étées sélectionnées
+pour le contrôle des moteurs du PCB.
+
+Pour le moteur \textbf{28byj-48} et son driver (c.f \autoref{fig:Photo_moteur_28byj-48}), librairie \textbf{Unitep2}\cite{Unistep2}\footnotemark \footnotetext{\url{https://www.arduino.cc/reference/en/libraries/unistep2/}},
+elle a pour avantage d'être non bloquante, c'est-à-dire que le programme ne doit pas attendre la fin du mouvement du moteur pas-à-pas pour continuer son execution, ce qui nous arrange beaucoup dans le cadre du programme
+de contrôle qui dépend beaucoup de la méthode millis.
+
+Pour contrôler le moteur de la \textbf{pompe péristaltique}, on utilise un driver \textbf{L293d} (guide de connection et d'utilisation disponible en \autocite{L293D_tuto}\footnotemark\footnotetext{\url{https://www.instructables.com/How-to-use-the-L293D-Motor-Driver-Arduino-Tutorial/}}),
+avec la libraire \textbf{DCmotor}\cite{DCmotor}\footnotemark\footnotetext{\url{https://reference.arduino.cc/reference/en/libraries/dcmotor/}}, elle est, elle aussi non bloquante, très simple d'utilisation et spécialement conçue pour notre driver.
+
+Enfin, le contrôle du \textbf{servo moteur} est géré par la libraire \textbf{Servo.h}\cite{Servo}\footnotemark\footnotetext{\url{https://www.arduino.cc/reference/en/libraries/servo/}}.
+
+\newpage
+La communication entre l'ESP32 et l'arduino se fait via UART (ou serial). Le principe de protocole de communication est le suivant :
+\begin{figure}[H]
+    \centering
+    \includegraphics[page = 1, width = \textwidth, trim = {1cm 18cm 1cm 0cm},clip]{assets/figures/ameliorations/protocole_de_comm.drawio.pdf}
+    \caption[Structure de communication]{Structure de communication sous forme de choix ( en \color{red} rouge \color{black} = valeur dans la trame)}
+\end{figure}
