@@ -132,7 +132,7 @@ dimensions d'une courroie MXL classique\cite{dimensions_courroies_mxl}\footnotem
 
 
 
-\subsubsection{Communication entre ordinateur et arduino}
+\subsubsection{Communication entre ordinateur et arduino}\label{sec:comm_ordi_arduino}
 
 Pour la communication entre l'ordinateur, le moteur de translation et celui de rotation, un arduino nano (clône) est utilisé :
 \begin{figure}[H]
@@ -502,3 +502,61 @@ La communication entre l'ESP32 et l'arduino se fait via UART (ou serial). Le pri
     \includegraphics[page = 1, width = \textwidth, trim = {1cm 18cm 1cm 0cm},clip]{assets/figures/ameliorations/protocole_de_comm.drawio.pdf}
     \caption[Structure de communication]{Structure de communication sous forme de choix ( en \color{red} rouge \color{black} = valeur dans la trame)}
 \end{figure}
+Sous forme de trame cela donne :
+\begin{figure}[H]
+    \centering
+    \includegraphics[page = 1, width = \textwidth]{assets/figures/ameliorations/trame_spray.png}
+    \caption[Trame de communication du spray]{Trame de communication du spray}
+\end{figure}
+Et donc par exemple pour l'amorçage cela donnerait :
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\linewidth]{assets/figures/ameliorations/trame_amorcage_on.png}
+        \caption{Trame pour activer l'amorçage}
+
+    \end{subfigure}%
+    \begin{subfigure}{.5\textwidth}
+        \centering
+        \includegraphics[width=0.9\linewidth]{assets/figures/ameliorations/trame_amorcage_off.png}
+        \caption{Trame pour désactiver l'amorçage}
+
+    \end{subfigure}
+    \caption{Exemple de trame d'amorçage du spray}
+
+\end{figure}
+Et pour par exemple sprayer pendant 20 secondes et faire tourner l'écran 15 secondes, cela donnerait :
+\begin{figure}[H]
+    \centering
+    \includegraphics[page = 1, width = 0.7\textwidth]{assets/figures/ameliorations/trame_rota_spray.png}
+    \caption{Trame de communication de spray et de rotation}
+\end{figure}
+
+Comme expliqué dans la \autoref{sec:comm_ordi_arduino}, les trames sont envoyées sous forme de string de valeurs séparées par des virgules.
+
+Passons donc au structogramme décrivant le fonctionnement de l'arduino :
+\begin{figure}[H]
+    \centering
+    \includegraphics[page = 1, width = 1\textwidth,trim = {0cm 8cm 1cm 0cm}, clip]{assets/figures/ameliorations/structogramme_spray.drawio.pdf}
+    \caption{Structogramme spray}
+\end{figure}
+Le code de l'arduino est accessible dans la \autoref{code:arduino_spray}.
+
+\newpage
+\subsubsection{Gestion de l'interface WEB}
+L'interface web tourne sur un ESP32-DevKitC ESP-WROOM-32U (un devkit disponible sur beaucoup de sites, dont des sites chinois) :
+\begin{figure}[H]
+    \centering
+    \includegraphics[page = 1, width = 0.6\textwidth]{assets/figures/ameliorations/ESP32_devkit.jpg}
+    \caption{ESP32 devkit}
+\end{figure}
+
+Similairement au code du programme de mesure, les interaction avec l'UI sont gérées par des Callbacks, il est donc compliqué de réaliser un structogramme pour ce programme, heureusement la structure de ce programme est beaucoup
+plus simple.
+
+Pour faciliter la création de l'UI, la librairie \textbf{ESPUI}\cite{ESPUI}\footnotemark\footnotetext{\url{https://github.com/s00500/ESPUI}} qui est très bien
+documentée sur sa page github. Pour comprendre certains éléments du code, il est conseillé d'observer l'exemple appelé "CompleteExemple" sur le GitHub de la librairie ESPUI, ce dernier explique comment paramétrer le wifi de l'ESP32 et démarrer
+un server WEB, il explique aussi les basiques de la création d'interfaces.
+
+Le code source pour l'ESP32 est disponible dans la \autoref{code:interface_web}

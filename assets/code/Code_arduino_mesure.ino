@@ -1,3 +1,9 @@
+/************
+Auteur: Antoine Oberson
+Contact : antoine@oberson.com
+date:02.10.2024
+
+************/
 #include <Arduino.h>
 
 #include <AccelStepper.h>
