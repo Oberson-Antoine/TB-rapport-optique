@@ -18,6 +18,7 @@
 
 \usepackage{subcaption}
 \usepackage{pdfpages}
+\usepackage{matlab-prettifier}
 %\usepackage{biblatex}
 
 \signature{mbernasconi.svg} % Remplacer par votre propre signature vectorielle.
@@ -47,6 +48,12 @@
 %% Requis par les dispositions générales des travaux de Bachelor
 \preamble
 \authentification
+\includepdf[pages=-]{assets/figures/scan_enonce/scan_énoncé.pdf}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[page=1-,width = \textwidth]{assets/figures/scan_enonce/scan_énoncé.pdf}
+% \end{figure}
+
 
 %% Résumé / Résumé publiable / Version abrégée
 \begin{abstract}
@@ -95,7 +102,8 @@
 \chapter{Améliorations}
 \input{Ameliorations.tex}
 
-\input{examples.tex}
+\chapter{Mesures}
+\input{mesures.tex}
 
 \chapter{Conclusion}
 \input{conclusion.tex}
