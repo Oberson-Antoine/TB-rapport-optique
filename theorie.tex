@@ -12,25 +12,25 @@ Le seeing peut être quantifié en seconde d'arc du disque de seeing, le diamèt
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{assets/figures/théorie/FWHM.png}
-  \caption[Illustration de la LMH]{Illustration de la largeur à mis-hauteur \autocite{largeur_mis_hauteur}\footnotemark}\label{fig:largeur_mis_hauteur}
+  \caption[Illustration de la LMH]{Illustration de la largeur à mi-hauteur \autocite{largeur_mis_hauteur}\footnotemark}\label{fig:largeur_mis_hauteur}
 \end{figure}
 
 \footnotetext{\fullcite{largeur_mis_hauteur}}
-Un seeing étant $\leq  0.4$" d'arc est considéré comme excellant, au DAG le seeing est usuellement de 0.9".
+Un seeing étant $\leq  0.4$" d'arc est considéré comme excellent, au DAG le seeing est usuellement de 0.9".
 
 Une autre façon de quantifier le seeing est le paramètre de Fried $\mathbf{r_0}$. Pour expliquer le paramètre $r_0$, c'est le diamètre en cm qu'aurait un télescope
 qui fournirait, en l'absence de turbulences, la même image que notre télescope en présence de turbulences. C'est ce paramètre $r_0$ qui sera utilisé en suite pour caractériser les écrans de phase.
 
 La formule qui sera utilisée dans le calcul du paramètre de Fried sera :
 \begin{equation}
-  \sigma_{a_j}^2 \sim F(j) \cdot (\frac{D}{r_0})^{5/3}
+  \sigma_{a_j}^2 \sim F(j) \cdot (\frac{D}{r_0})^{5/3} \label{eq:param_fried}
 \end{equation}
 
 Où :
 \begin{itemize}
   \item $\sigma_{a_j}^2$ = la variance des coefficients de Zernike j
   \item  $F(j)$ = variance des coefficients de Zernike pour D/r0 = 1
-  \item $D$ = diamètre du laser
+  \item $D$ = diamètre du téléscope
   \item $r_0$ = paramètre de Fried
 \end{itemize}
 
@@ -189,16 +189,17 @@ Le principe de fonctionnement d'un capteur de Shack-Hartmann est le suivant :
 \footnotetext{\fullcite{WFS_thorlabs_site}}
 
 \say{ Un capteur de Shack-Hartmann consiste en une grille de lentilles et une caméra. Quand un front d'onde entre dans la matrice de lentilles,
-  un champ de points est créé sur la caméra. L'intensité et la position de chaque point sont analysées pour mesurer dynamiquement le front d'onde
+  un champ de points est créé sur la caméra. La position de chaque point est analysée pour mesurer dynamiquement le front d'onde
   de sources laser ou pour caractériser la distorsion de front d'onde causée par des composants optiques. }\footnotemark[5]
 
-Ce capteur nous est donc utile, car ce dernier permet de mesurer et de représenter le front d'onde du laser, il retourne aussi les coefficients de
-Zernike du front d'onde.
+Ce capteur nous est donc utile, car ce dernier permet de mesurer et de représenter le front d'onde du du faisceau lumineux passant à travers la turbulence
+optique, ou alors, dans notre cas, à travers l'écran de phase, il retourne aussi les coefficients de Zernike du front d'onde.
 
 \newpage
 \subsubsection{Coefficients de Zernike}
 
-Les coefficients de Zernike sont issus des polynômes de Zernike, ces derniers
+Les coefficients de Zernike sont les "poids" polynômes de Zernike, c'est-à-dire la contribution que chaque polynome a pour décrire les aberrations de front d'onde,
+ces derniers
 permettent de décrire n'importe quelle surface dans un domaine circulaire.
 \begin{figure}[H]
   \centering
