@@ -199,8 +199,7 @@ optique, ou alors, dans notre cas, à travers l'écran de phase, il retourne aus
 \subsubsection{Coefficients de Zernike}
 
 Les coefficients de Zernike sont les "poids" polynômes de Zernike, c'est-à-dire la contribution que chaque polynome a pour décrire les aberrations de front d'onde,
-ces derniers
-permettent de décrire n'importe quelle surface dans un domaine circulaire.
+ces derniers permettent de décrire n'importe quelle surface dans un domaine circulaire.
 \begin{figure}[H]
   \centering
   \begin{subfigure}{.5\textwidth}
@@ -221,4 +220,7 @@ permettent de décrire n'importe quelle surface dans un domaine circulaire.
 
 \footnotetext{\fullcite{Zernike_docteur_Damien}}
 
-Pour reconstruire le front d'onde il suffit alors de sommer les fronts d'ondes des coefficients de Zernike i j.
+Pour reconstruire le front d'onde il suffit alors de sommer les fronts d'ondes des coefficients de Zernike. Autrement dit en équation cela donne :
+\begin{equation}
+  Front d'onde = \sum_{j=1}^{N}a_j * Z_j
+\end{equation}
