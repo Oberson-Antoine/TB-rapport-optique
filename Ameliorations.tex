@@ -279,7 +279,8 @@ L'écran se fixe sur la machine de mesure à l'aide d'une vis à main :
     \caption{Système de fixation de l'écran}
 \end{figure}
 À noter que les trous taraudés sont à faire à la main à l'aide d'un tourne à gauche directement dans le plastique, en effet,
-cela est suffisement solide car l'utilisateur n'est pas censé démonter le moteur de rotation à chaque utilisation de la machine.
+cela est suffisamment
+solide car l'utilisateur n'est pas censé démonter le moteur de rotation à chaque utilisation de la machine.
 
 \subsubsection{Fixation du système de mesure au banc optique}
 Le support à crémaillère vient se fixer sur un support de table optique à l'aide d'une vis sans tête m6 :
@@ -334,11 +335,11 @@ Pour fonctionner, le programme a besoin de :
 
 Le fonctionnement du programme se base sur des boutons qui déclenchent des fonctions Callbacks, donc pas de boucle principale,
 ni de fonctionnement séquentiel, dans cette section il conviendra donc d'expliquer le fonctionnement et la logique derrière le processus
-de mesure, pour le reste le code source est normalement suffisement bien documenté.
+de mesure, pour le reste le code source est normalement suffisamment bien documenté.
 \newpage
 
 \subsubsection{Structogramme des fonctions de mesure}
-Comme dit précédemment voici le structogramme du principe de fonctionnement du programme lors des mesures :
+Comme dit précédemment, voici le structogramme du principe de fonctionnement du programme lors des mesures :
 \begin{figure}[H]
     \centering
     \includegraphics[width = \textwidth,trim={0cm 0cm 0cm 1cm},clip]{assets/figures/ameliorations/structogramme_programme.drawio.pdf}
@@ -348,9 +349,9 @@ Le code du programme de mesure est disponible dans la \autoref{code:interface_me
 
 \subsubsection{API de communication avec la caméra}
 L'API de communication de la caméra sur matlab est le fichier \textit{thorlabswfs.m} disponible \href{https://ch.mathworks.com/matlabcentral/fileexchange/116485-driver-for-thorlabs-shack-hartmann-wavefront-sensors-wfs}{ici},
-il est décrit comment intéragir avec la caméra sur la page web.
+il est décrit comment interagir avec la caméra sur la page web.
 
-\color{red}IMPORTANT\color{black}, il est \textbf{impératif} d'utiliser le fichier fournis avec l'interface, en effet ce dernier contient une fonction supplémentaire INDISPENSABLE pour le fonctionnement de l'application :
+\color{red}IMPORTANT\color{black}, il est \textbf{impératif} d'utiliser le fichier fourni avec l'interface, en effet ce dernier contient une fonction supplémentaire INDISPENSABLE pour le fonctionnement de l'application :
 \begin{figure}[H]
     \centering
     \includegraphics[width = \textwidth,]{assets/figures/ameliorations/nouvelle_fonction_API.png}
@@ -364,19 +365,19 @@ Elle sert à demander à la caméra si la valeur moyenne des coefficients de Zer
 
 Passons donc en revue les fonctions les plus utiles de cette API :
 \begin{itemize}
-    \item \textbf{wfs} = thorlabswfs : retourne la liste des caméra connectées sur l'ordinateur et initialise l'objet wfs.
-    \item \textbf{wfs.connect("adresse caméra")} : conncte la caméra au programme.
-    \item toutes les fonctions de paramètrage de la caméra :
+    \item \textbf{wfs} = thorlabswfs : retourne la liste des caméras connectées sur l'ordinateur et initialise l'objet wfs.
+    \item \textbf{wfs.connect("adresse caméra")} : connecte la caméra au programme.
+    \item toutes les fonctions de paramétrage de la caméra :
           \begin{figure}[H]
               \includegraphics[width = \textwidth]{assets/figures/ameliorations/fonctions de paramètres caméra.png}
           \end{figure}
-    \item \textbf{wfs.Spotfield\_Image} : retourne une image du Spotfield de la caméra et mets à jours les mesures de la caméra.
+    \item \textbf{wfs.Spotfield\_Image} : retourne une image du Spotfield de la caméra et met à jour les mesures de la caméra.
     \item \textbf{wfs.Zernike} : retourne les coefficients de Zernike (ici 66).
     \item \textbf{wfs.wavefront} : retourne les valeurs RMS du wavefront.
 \end{itemize}
 
 \newpage
-\subsubsection{Mode d'emplois}
+\subsubsection{Mode d'emploi}
 \includepdf[pages = 1-]{assets/figures/ameliorations/mode d'emplois mesure.pdf}
 
 \newpage
@@ -597,7 +598,7 @@ plus simple.
 
 Pour faciliter la création de l'UI, la librairie \textbf{ESPUI}\cite{ESPUI}\footnotemark\footnotetext{\url{https://github.com/s00500/ESPUI}} qui est très bien
 documentée sur sa page github. Pour comprendre certains éléments du code, il est conseillé d'observer l'exemple appelé "CompleteExemple" sur le GitHub de la librairie ESPUI, ce dernier explique comment paramétrer le wifi de l'ESP32 et démarrer
-un server WEB, il explique aussi les basiques de la création d'interfaces.
+un serveur WEB, il explique aussi les basiques de la création d'interfaces.
 
 Le code source pour l'ESP32 est disponible dans la \autoref{code:interface_web}.
 
@@ -611,8 +612,8 @@ grosses gouttes qui pourraient tomber sur l'écran et donc ruiner le résultat a
     \includegraphics[width = 1\textwidth]{assets/figures/ameliorations/aiguille_haut_bas.jpg}
     \caption{Illustration du contrôle de l'aiguille}
 \end{figure}
-Le contrôle de l'aiguille est réalisé à l'aide de deux pièces qui peuvent coulisser verticalement l'une dans l'autre, la pièce sur l'aiguille est fixée à l'aide de deux vis sans têtes
-pour son installation il faut vérifier que le servo moteur est bien sur la position fermée (position de base lorsque le système est allumé) on peut en suite serrer les vis.
+Le contrôle de l'aiguille est réalisé à l'aide de deux pièces qui peuvent coulisser verticalement l'une dans l'autre, la pièce sur l'aiguille est fixée à l'aide de deux vis sans tête
+pour son installation il faut vérifier que le servo moteur est bien sur la position fermée (position de base lorsque le système est allumé) on peut ensuite serrer les vis.
 
 \newpage
 \subsubsection{Contrôle de la pression}
@@ -624,5 +625,5 @@ Le contrôle de la pression de l'air dans le système se fait au travers d'un r�
 \end{figure}
 L'aiguille de l'appareil indique tout simplement la pression envoyée dans le système.
 \newpage
-\subsubsection{Mode d'emplois}
+\subsubsection{Mode d'emploi}
 \includepdf[pages = 1-]{assets/figures/ameliorations/mode d'emplois spray.pdf}
